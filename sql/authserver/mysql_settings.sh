@@ -1,4 +1,4 @@
 USER=root
 PASS=1234
-DBNAME=l2_interlude
+DBNAME=l2_main
 DBHOST=localhost

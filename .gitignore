@@ -30,3 +30,7 @@ pid
 .vscode/
 /.idea/
 /log/
+.idea/
+encodings.xml
+misc.xml
+workspace.xml

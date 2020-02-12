@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1aeeaf08-8e60-4d7e-a35b-0eada0df16ed" name="Default Changelist" comment="add config">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1aeeaf08-8e60-4d7e-a35b-0eada0df16ed" name="Default Changelist" comment="fix gameservers.sql">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/authserver/install/gameservers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/authserver/install/gameservers.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/authserver/mysql_settings.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sql/authserver/mysql_settings.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/AuthServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/AuthServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/gameserver/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sql/gameserver/install.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/gameserver/mysql_settings.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sql/gameserver/mysql_settings.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/auth/authserver.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/auth/authserver.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,33 +30,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="dev" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="dev" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="dev" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="l2_interlude: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="l2_main: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="dev" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="l2_interlude: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="l2_main: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="l2_interlude: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="character_post_friends: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -64,6 +56,11 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="81630b4f-0225-4150-bb82-fe844ec20b8c" />
+    </checked>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="interlude" />
@@ -78,7 +75,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="x25" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,6 +86,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1S52eGtNZtHKyG5qpzLFwaFhKK6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -103,7 +103,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -178,8 +178,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.AuthServer" />
-        <item itemvalue="Application.AccountManager" />
         <item itemvalue="Application.GameServer" />
+        <item itemvalue="Application.AccountManager" />
         <item itemvalue="Application.PasswordHash" />
       </list>
     </recent_temporary>
@@ -201,7 +201,9 @@
       <workItem from="1572471407645" duration="11407000" />
       <workItem from="1572650525354" duration="549000" />
       <workItem from="1581456577384" duration="3582000" />
-      <workItem from="1581460209202" duration="199000" />
+      <workItem from="1581460209202" duration="2864000" />
+      <workItem from="1581468056426" duration="31000" />
+      <workItem from="1581541965582" duration="3100000" />
     </task>
     <task id="LOCAL-00001" summary="add 2 libs">
       <created>1570847277013</created>
@@ -280,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572482455518</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix gameservers.sql">
+      <created>1581460495740</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581460495740</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,9 +332,9 @@
     <MESSAGE value="change cache" />
     <MESSAGE value="configure start" />
     <MESSAGE value="change cache size" />
-    <option name="LAST_COMMIT_MESSAGE" value="change cache size" />
+    <MESSAGE value="fix gameservers.sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix gameservers.sql" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="58" width="800" height="677" key="#Plugins" timestamp="1581460163902">
@@ -336,54 +345,82 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="311" y="58" width="800" height="677" key="#SQL_Dialects/67.27.1299.741@67.27.1299.741" timestamp="1581459044742" />
+    <state x="257" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581543496719">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="257" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1581543496719" />
+    <state x="311" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1581462860161" />
     <state x="557" y="288" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581456709027">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="557" y="288" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1299.741@67.27.1299.741" timestamp="1581456709027" />
-    <state x="281" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581460455299">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="225" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581545429391">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="281" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581460455299" />
+    <state x="225" y="27" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1581545429391" />
+    <state x="281" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581460495368" />
+    <state x="419" y="78" width="492" height="636" key="ExecutionTargetDialog" timestamp="1581543502494">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="419" y="78" width="492" height="636" key="ExecutionTargetDialog/0.27.1366.741@0.27.1366.741" timestamp="1581543502494" />
+    <state x="465" y="78" width="492" height="636" key="ExecutionTargetDialog/67.27.1299.741@67.27.1299.741" timestamp="1581462875674" />
     <state x="494" y="155" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581457492593">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="494" y="155" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1581457492593" />
-    <state width="1253" height="305" key="GridCell.Tab.0.bottom" timestamp="1581460019959">
+    <state width="1320" height="193" key="GridCell.Tab.0.bottom" timestamp="1581545064491">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="193" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581545064491" />
+    <state width="1253" height="325" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581463412959" />
+    <state width="1320" height="193" key="GridCell.Tab.0.center" timestamp="1581545064489">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="193" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1581545064489" />
+    <state width="1253" height="325" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581463412958" />
+    <state width="1320" height="193" key="GridCell.Tab.0.left" timestamp="1581545064487">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="193" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1581545064487" />
+    <state width="1253" height="325" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581463412957" />
+    <state width="1320" height="193" key="GridCell.Tab.0.right" timestamp="1581545064490">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="193" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1581545064490" />
+    <state width="1253" height="325" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581463412959" />
+    <state width="1253" height="371" key="GridCell.Tab.1.bottom" timestamp="1581463313777">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="305" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581460019959" />
-    <state width="1253" height="305" key="GridCell.Tab.0.center" timestamp="1581460019958">
+    <state width="1253" height="371" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581463313777" />
+    <state width="1253" height="371" key="GridCell.Tab.1.center" timestamp="1581463313776">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="305" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581460019958" />
-    <state width="1253" height="305" key="GridCell.Tab.0.left" timestamp="1581460019956">
+    <state width="1253" height="371" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
+    <state width="1253" height="371" key="GridCell.Tab.1.left" timestamp="1581463313776">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="305" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581460019956" />
-    <state width="1253" height="305" key="GridCell.Tab.0.right" timestamp="1581460019958">
+    <state width="1253" height="371" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
+    <state width="1253" height="371" key="GridCell.Tab.1.right" timestamp="1581463313776">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="305" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581460019958" />
-    <state width="1253" height="371" key="GridCell.Tab.1.bottom" timestamp="1581458914964">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1253" height="371" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
+    <state width="277" height="500" key="HiddenNamespacesPopup" timestamp="1581543483420">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1253" height="371" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581458914964" />
-    <state width="1253" height="371" key="GridCell.Tab.1.center" timestamp="1581458914963">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="277" height="500" key="HiddenNamespacesPopup/0.27.1366.741@0.27.1366.741" timestamp="1581543483420" />
+    <state width="263" height="500" key="HiddenNamespacesPopup/67.27.1299.741@67.27.1299.741" timestamp="1581462760917" />
+    <state x="450" y="110" width="445" height="574" key="RollbackChangesDialog" timestamp="1581545423068">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1253" height="371" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1581458914963" />
-    <state width="1253" height="371" key="GridCell.Tab.1.left" timestamp="1581458914963">
-      <screen x="67" y="27" width="1299" height="741" />
-    </state>
-    <state width="1253" height="371" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1581458914963" />
-    <state width="1253" height="371" key="GridCell.Tab.1.right" timestamp="1581458914963">
-      <screen x="67" y="27" width="1299" height="741" />
-    </state>
-    <state width="1253" height="371" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1581458914963" />
+    <state x="450" y="110" width="445" height="574" key="RollbackChangesDialog/0.27.1366.741@0.27.1366.741" timestamp="1581545423068" />
     <state x="199" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1581457885808">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="199" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1581457885808" />
+    <state x="311" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1581460498389">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="311" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1581460498389" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1581460253705">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

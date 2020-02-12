@@ -9,6 +9,6 @@ fi
 
 for sqlfile in install/*.sql
 do
-        echo Loading $sqlfile to " $DBNAME " ...
-        mysql --host=$DBHOST --user=$USER --password=$PASS $DBNAME < $sqlfile
+        echo Loading "$sqlfile" to " l2_main " ...
+        mysql --host="localhost" --user="root" --password="1234" "l2_main" < "$sqlfile"
 done

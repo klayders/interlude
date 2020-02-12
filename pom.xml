@@ -6,7 +6,7 @@
 
   <groupId>com.lineage2</groupId>
   <artifactId>interlude</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -167,10 +167,86 @@
     </dependency>
 
   </dependencies>
+
   <repositories>
+    <repository>
+      <id>jcenter-snapshots</id>
+      <name>jcenter</name>
+      <url>https://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+    </repository>
+    <repository>
+      <id>morphine.nexus.central</id>
+      <name>morphine-nexus-central</name>
+      <url>https://nexus.finch.fm/repository/maven-central/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+    <repository>
+      <id>morphine.nexus.release</id>
+      <name>morphine-nexus-release</name>
+      <url>https://nexus.finch.fm/repository/maven-releases/</url>
+      <layout>default</layout>
+      <releases>
+        <updatePolicy>always</updatePolicy>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>morphine.nexus.snapshot</id>
+      <name>morphine-nexus-snapshot</name>
+      <url>https://nexus.finch.fm/repository/maven-snapshots/</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>SpringRepo</id>
+      <name>Spring Maven Repository</name>
+      <url>https://maven.springframework.org/milestone/</url>
+    </repository>
+    <repository>
+      <id>springsource-repo</id>
+      <name>SpringSource Repository</name>
+      <url>https://repo.springsource.org/release</url>
+    </repository>
+    <repository>
+      <id>maven.repo</id>
+      <name>Maven repo</name>
+      <url>https://repo1.maven.org/maven2</url>
+    </repository>
+    <repository>
+      <id>jboss.maven.repo</id>
+      <name>JBoss Maven Repository</name>
+      <url>https://repository.jboss.org/nexus/content/groups/public</url>
+    </repository>
     <repository>
       <id>ukp-oss-releases</id>
       <url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
     </repository>
   </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>morphine.nexus.release</id>
+      <name>Internal Releases</name>
+      <url>http://nexus.finch.fm/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>morphine.nexus.snapshot</id>
+      <name>Internal Releases</name>
+      <url>http://nexus.finch.fm/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+
 </project>

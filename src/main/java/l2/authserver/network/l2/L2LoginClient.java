@@ -1,6 +1,6 @@
 package l2.authserver.network.l2;
 
-import l2.authserver.Config;
+import l2.authserver.config.Config;
 import l2.authserver.accounts.Account;
 import l2.authserver.crypt.LoginCrypt;
 import l2.authserver.crypt.ScrambledKeyPair;

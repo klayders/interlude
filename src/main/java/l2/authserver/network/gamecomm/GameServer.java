@@ -1,6 +1,6 @@
 package l2.authserver.network.gamecomm;
 
-import l2.authserver.Config;
+import l2.authserver.config.Config;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;

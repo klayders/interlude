@@ -1,6 +1,6 @@
 package l2.authserver.network.gamecomm.gs2as;
 
-import l2.authserver.Config;
+import l2.authserver.config.Config;
 import l2.authserver.accounts.Account;
 import l2.authserver.crypt.PasswordHash;
 import l2.authserver.network.gamecomm.ReceivablePacket;

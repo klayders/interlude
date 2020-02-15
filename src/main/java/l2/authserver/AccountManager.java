@@ -1,6 +1,7 @@
 package l2.authserver;
 
 import l2.authserver.accounts.Account;
+import l2.authserver.config.Config;
 import l2.authserver.database.L2DatabaseFactory;
 
 public class AccountManager {

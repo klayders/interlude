@@ -4,7 +4,7 @@ package l2.authserver.database;
 //import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
 
 import com.mysql.cj.jdbc.MysqlConnectionPoolDataSource;
-import l2.authserver.Config;
+import l2.authserver.config.Config;
 import l2.authserver.ThreadPoolManager;
 import l2.commons.db.BaseDataConnectionFactory;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +14,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import static l2.authserver.Config.*;
+import static l2.authserver.config.Config.*;
 
 @Slf4j
 public class L2DatabaseFactory extends BaseDataConnectionFactory {

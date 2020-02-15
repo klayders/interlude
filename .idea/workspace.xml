@@ -1,15 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1aeeaf08-8e60-4d7e-a35b-0eada0df16ed" name="Default Changelist" comment="fix gameservers.sql">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="1aeeaf08-8e60-4d7e-a35b-0eada0df16ed" name="Default Changelist" comment="change sql directory">
+      <change afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/config/AuthServerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/GMAccess.d/event_manager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/GMAccess.d/event_manager.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/GMAccess.d/full.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/GMAccess.d/full.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/GMAccess.d/marshal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/GMAccess.d/marshal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/GMAccess.d/moderator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/GMAccess.d/moderator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/GMAccess.d/sheriff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/GMAccess.d/sheriff.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/GMAccess.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/GMAccess.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/ai.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/ai.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/altsettings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/altsettings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/announcements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/announcements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/autoannounce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/autoannounce.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bosses.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/bosses.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/chatfilters.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/chatfilters.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/chatfilters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/chatfilters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/clan.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/clan.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/GMAccess.d/event_manager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/GMAccess.d/event_manager.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/GMAccess.d/full.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/GMAccess.d/full.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/GMAccess.d/marshal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/GMAccess.d/marshal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/GMAccess.d/moderator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/GMAccess.d/moderator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/GMAccess.d/sheriff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/GMAccess.d/sheriff.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/GMAccess.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/GMAccess.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/ai.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/ai.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/altsettings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/altsettings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/announcements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/announcements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/autoannounce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/autoannounce.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/bosses.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/bosses.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/chatfilters.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/chatfilters.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/chatfilters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/chatfilters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/clan.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/clan.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/ehcache.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/ehcache.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/events.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/events.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/fake.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/fake.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/formulas.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/formulas.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/geodata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/geodata.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/log4j.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/log4j.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/olympiad.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/olympiad.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/other.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/other.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/pvp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/pvp.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/pvpcommunityboard.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/pvpcommunityboard.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/quest_rates.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/quest_rates.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/residence.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/residence.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/services.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/services.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/services_rate_bonus.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/services_rate_bonus.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/services_rate_bonus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/services_rate_bonus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/spoil.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/spoil.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_english/telnet.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_english/telnet.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/GMAccess.d/event_manager.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/GMAccess.d/event_manager.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/GMAccess.d/full.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/GMAccess.d/full.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/GMAccess.d/marshal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/GMAccess.d/marshal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/GMAccess.d/moderator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/GMAccess.d/moderator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/GMAccess.d/sheriff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/GMAccess.d/sheriff.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/GMAccess.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/GMAccess.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/ai.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/ai.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/altsettings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/altsettings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/announcements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/announcements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/autoannounce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/autoannounce.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/bosses.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/bosses.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/chatfilters.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/chatfilters.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/chatfilters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/chatfilters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/clan.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/clan.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/ehcache.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/ehcache.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/events.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/events.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/fake.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/fake.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/formulas.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/formulas.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/geodata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/geodata.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/log4j.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/log4j.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/olympiad.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/olympiad.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/other.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/other.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/pvp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/pvp.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/pvpcommunityboard.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/pvpcommunityboard.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/quest_rates.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/quest_rates.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/residence.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/residence.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/services.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/services.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/services_rate_bonus.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/services_rate_bonus.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/services_rate_bonus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/services_rate_bonus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/spoil.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/spoil.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default_russian/telnet.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/default_russian/telnet.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/ehcache.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/ehcache.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/events.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/events.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/fake.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/fake.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/formulas.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/formulas.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/geodata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/geodata.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/log4j.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/log4j.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/olympiad.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/olympiad.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/other.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/other.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/pvp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/pvp.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/pvpcommunityboard.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/pvpcommunityboard.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/quest_rates.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/quest_rates.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/residence.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/residence.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/services.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services_rate_bonus.dtd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/services_rate_bonus.dtd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services_rate_bonus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/services_rate_bonus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/spoil.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/spoil.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/telnet.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game/telnet.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/gameserver/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sql/gameserver/install.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/gameserver/mysql_settings.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sql/gameserver/mysql_settings.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/auth/authserver.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/auth/authserver.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/AccountManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/AuthServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/AuthServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/GameServerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/GameServerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/IpBanManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/IpBanManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/database/L2DatabaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/database/L2DatabaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/network/gamecomm/GameServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/network/gamecomm/GameServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/network/gamecomm/GameServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/network/gamecomm/GameServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/network/gamecomm/gs2as/IGPwdCng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/network/gamecomm/gs2as/IGPwdCng.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/network/l2/L2LoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/network/l2/L2LoginClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/network/l2/request/RequestAuthLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/network/l2/request/RequestAuthLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l2/authserver/utils/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l2/authserver/utils/Log.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +215,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test/demo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -112,8 +224,13 @@
     <property name="project.structure.side.proportion" value="0.2954023" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/game" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="C:\Users\User\IdeaProjects\interlude\src\main\java\l2" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -128,7 +245,7 @@
       <module name="interlude" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="l2.authserver.*" />
+          <option name="PATTERN" value="l2.authserver.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,7 +258,7 @@
       <module name="interlude" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="l2.authserver.*" />
+          <option name="PATTERN" value="l2.authserver.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -175,6 +292,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="auth" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="exec:java" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="interlude" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="l2.authserver.AuthServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AccountManager" />
+      <item itemvalue="Application.AuthServer" />
+      <item itemvalue="Application.GameServer" />
+      <item itemvalue="Application.PasswordHash" />
+      <item itemvalue="Maven.auth" />
+      <item itemvalue="Spring Boot.AuthServer" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.AuthServer" />
@@ -203,7 +362,11 @@
       <workItem from="1581456577384" duration="3582000" />
       <workItem from="1581460209202" duration="2864000" />
       <workItem from="1581468056426" duration="31000" />
-      <workItem from="1581541965582" duration="3100000" />
+      <workItem from="1581541965582" duration="3548000" />
+      <workItem from="1581549475796" duration="6729000" />
+      <workItem from="1581624357004" duration="2798000" />
+      <workItem from="1581787493035" duration="974000" />
+      <workItem from="1581788804062" duration="773000" />
     </task>
     <task id="LOCAL-00001" summary="add 2 libs">
       <created>1570847277013</created>
@@ -289,7 +452,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581460495740</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="specify directories">
+      <created>1581545453325</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581545453325</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change sql directory">
+      <created>1581545515042</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1581545515042</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,76 +510,88 @@
     <MESSAGE value="configure start" />
     <MESSAGE value="change cache size" />
     <MESSAGE value="fix gameservers.sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix gameservers.sql" />
+    <MESSAGE value="specify directories" />
+    <MESSAGE value="change sql directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="change sql directory" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="311" y="58" width="800" height="677" key="#Plugins" timestamp="1581460163902">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="257" y="58" width="800" height="677" key="#Plugins" timestamp="1581787453140">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="257" y="58" key="#Plugins/0.27.1366.741@0.27.1366.741" timestamp="1581787453140" />
     <state x="311" y="58" width="800" height="677" key="#Plugins/67.27.1299.741@67.27.1299.741" timestamp="1581460163902" />
+    <state x="278" y="58" width="800" height="677" key="#Project_Structure" timestamp="1581551068920">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="278" y="58" width="800" height="677" key="#Project_Structure/0.27.1366.741@0.27.1366.741" timestamp="1581551068920" />
     <state x="311" y="58" width="800" height="677" key="#SQL_Dialects" timestamp="1581459044742">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="311" y="58" width="800" height="677" key="#SQL_Dialects/67.27.1299.741@67.27.1299.741" timestamp="1581459044742" />
-    <state x="257" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581543496719">
+    <state x="257" y="58" width="878" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581785814071">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="257" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1581543496719" />
+    <state x="257" y="58" width="878" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1581785814071" />
     <state x="311" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1581462860161" />
     <state x="557" y="288" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581456709027">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="557" y="288" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1299.741@67.27.1299.741" timestamp="1581456709027" />
-    <state x="225" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581545429391">
+    <state x="225" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581545616979">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="225" y="27" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1581545429391" />
+    <state x="225" y="27" width="860" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1581545616979" />
     <state x="281" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581460495368" />
-    <state x="419" y="78" width="492" height="636" key="ExecutionTargetDialog" timestamp="1581543502494">
+    <state x="419" y="78" width="492" height="636" key="ExecutionTargetDialog" timestamp="1581550271882">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="419" y="78" width="492" height="636" key="ExecutionTargetDialog/0.27.1366.741@0.27.1366.741" timestamp="1581543502494" />
+    <state x="419" y="78" width="492" height="636" key="ExecutionTargetDialog/0.27.1366.741@0.27.1366.741" timestamp="1581550271882" />
     <state x="465" y="78" width="492" height="636" key="ExecutionTargetDialog/67.27.1299.741@67.27.1299.741" timestamp="1581462875674" />
-    <state x="494" y="155" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581457492593">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="449" y="155" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581550927960">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="449" y="155" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1581550927960" />
     <state x="494" y="155" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1581457492593" />
-    <state width="1320" height="193" key="GridCell.Tab.0.bottom" timestamp="1581545064491">
+    <state width="1320" height="246" key="GridCell.Tab.0.bottom" timestamp="1581787956959">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="193" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581545064491" />
+    <state width="1320" height="246" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581787956959" />
     <state width="1253" height="325" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581463412959" />
-    <state width="1320" height="193" key="GridCell.Tab.0.center" timestamp="1581545064489">
+    <state width="1320" height="246" key="GridCell.Tab.0.center" timestamp="1581787956958">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="193" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1581545064489" />
+    <state width="1320" height="246" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1581787956958" />
     <state width="1253" height="325" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581463412958" />
-    <state width="1320" height="193" key="GridCell.Tab.0.left" timestamp="1581545064487">
+    <state width="1320" height="246" key="GridCell.Tab.0.left" timestamp="1581787956958">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="193" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1581545064487" />
+    <state width="1320" height="246" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1581787956958" />
     <state width="1253" height="325" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581463412957" />
-    <state width="1320" height="193" key="GridCell.Tab.0.right" timestamp="1581545064490">
+    <state width="1320" height="246" key="GridCell.Tab.0.right" timestamp="1581787956959">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="193" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1581545064490" />
+    <state width="1320" height="246" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1581787956959" />
     <state width="1253" height="325" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581463412959" />
-    <state width="1253" height="371" key="GridCell.Tab.1.bottom" timestamp="1581463313777">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1320" height="246" key="GridCell.Tab.1.bottom" timestamp="1581551439466">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1320" height="246" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581551439466" />
     <state width="1253" height="371" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581463313777" />
-    <state width="1253" height="371" key="GridCell.Tab.1.center" timestamp="1581463313776">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1320" height="246" key="GridCell.Tab.1.center" timestamp="1581551439465">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1320" height="246" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1581551439465" />
     <state width="1253" height="371" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
-    <state width="1253" height="371" key="GridCell.Tab.1.left" timestamp="1581463313776">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1320" height="246" key="GridCell.Tab.1.left" timestamp="1581551439465">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1320" height="246" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1581551439465" />
     <state width="1253" height="371" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
-    <state width="1253" height="371" key="GridCell.Tab.1.right" timestamp="1581463313776">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state width="1320" height="246" key="GridCell.Tab.1.right" timestamp="1581551439466">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1320" height="246" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1581551439466" />
     <state width="1253" height="371" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
     <state width="277" height="500" key="HiddenNamespacesPopup" timestamp="1581543483420">
       <screen x="0" y="27" width="1366" height="741" />
@@ -413,21 +602,33 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="450" y="110" width="445" height="574" key="RollbackChangesDialog/0.27.1366.741@0.27.1366.741" timestamp="1581545423068" />
-    <state x="199" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1581457885808">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="139" y="27" width="1024" height="741" key="SettingsEditor" timestamp="1581787869318">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="139" y="27" width="1024" height="741" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1581787869318" />
     <state x="199" y="27" width="1024" height="741" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1581457885808" />
-    <state x="311" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1581460498389">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="257" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1581545516567">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="257" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1581545516567" />
     <state x="311" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1581460498389" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1581460253705">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="321" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1581803766308">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="321" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1581803766308" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1581460253705" />
-    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1581460158491">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="0" y="27" width="710" height="741" key="find.popup" timestamp="1581785270407">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="0" y="27" width="710" height="741" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1581785270407" />
+    <state x="347" y="175" key="run.anything.popup" timestamp="1581554041611">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="347" y="175" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1581554041611" />
+    <state x="328" y="89" width="707" height="678" key="search.everywhere.popup" timestamp="1581787377402">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="328" y="89" width="707" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1581787377402" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1581460158491" />
   </component>
   <component name="XDebuggerManager">
@@ -435,7 +636,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/l2/authserver/AccountManager.java</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -532,6 +733,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/l2/commons/db/BaseDataConnectionFactory.java</url>
           <line>105</line>
           <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///usr/lib/jvm/java-13-oracle/lib/src.zip!/java.base/java/net/URLClassLoader.java</url>
+          <line>435</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/l2/authserver/GameServerManager.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/l2/commons/db/BaseDataConnectionFactory.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

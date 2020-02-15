@@ -1,6 +1,6 @@
 package l2.authserver.utils;
 
-import l2.authserver.Config;
+import l2.authserver.config.Config;
 import l2.authserver.accounts.Account;
 import l2.authserver.database.L2DatabaseFactory;
 import l2.commons.dbutils.DbUtils;

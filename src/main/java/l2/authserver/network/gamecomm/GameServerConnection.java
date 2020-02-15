@@ -1,6 +1,6 @@
 package l2.authserver.network.gamecomm;
 
-import l2.authserver.Config;
+import l2.authserver.config.Config;
 import l2.authserver.ThreadPoolManager;
 import l2.authserver.network.gamecomm.as2gs.PingRequest;
 import l2.commons.threading.RunnableImpl;

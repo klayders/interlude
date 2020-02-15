@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE list SYSTEM "services_rate_bonus.dtd">
+<!DOCTYPE list SYSTEM "/home/matrocob/IdeaProjects/lineage/interlude/src/main/resources/game/services_rate_bonus.dtd">
 <list>
   <rate_bonus id="1" consume_item_id="4037" consume_item_amount="250">
     <exp value="1.2"/>

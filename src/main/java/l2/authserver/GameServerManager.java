@@ -5,7 +5,8 @@
 
 package l2.authserver;
 
-import l2.authserver.Config.ProxyServerConfig;
+import l2.authserver.config.Config;
+import l2.authserver.config.Config.ProxyServerConfig;
 import l2.authserver.database.L2DatabaseFactory;
 import l2.authserver.network.gamecomm.GameServer;
 import l2.authserver.network.gamecomm.ProxyServer;

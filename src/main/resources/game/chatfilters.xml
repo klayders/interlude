@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ChatFilters SYSTEM "chatfilters.dtd">
+<!DOCTYPE ChatFilters SYSTEM "/home/matrocob/IdeaProjects/lineage/interlude/src/main/resources/game/chatfilters.dtd">
 <ChatFilters>
   <!-- Запрет чата для новичков по лимиту уровня, отсылает предупреждение -->
   <!--

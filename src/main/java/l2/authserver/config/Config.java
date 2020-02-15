@@ -1,4 +1,4 @@
-package l2.authserver;
+package l2.authserver.config;
 
 import l2.authserver.crypt.PasswordHash;
 import l2.authserver.crypt.ScrambledKeyPair;
@@ -63,13 +63,13 @@ public class Config {
   private Config() {
   }
 
-  static void load() {
+  public static void load() {
     loadConfiguration();
     loadServerNames();
     loadServerProxies();
   }
 
-  static void initCrypt() throws Throwable {
+  public static void initCrypt() throws Throwable {
     DEFAULT_CRYPT = new PasswordHash();
     List<PasswordHash> legacy = new ArrayList<>();
     legacy.add(DEFAULT_CRYPT);
@@ -211,7 +211,7 @@ public class Config {
   }
 
   @Getter
-  static class ProxyServerConfig {
+  public static class ProxyServerConfig {
     private final int origServerId;
     private final int proxyServerId;
     private final String porxyHost;

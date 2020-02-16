@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.Map;
 
 @Slf4j
-public abstract class mysql {
+public abstract class MysqlInitializer {
 
-  public mysql() {
+  public MysqlInitializer() {
   }
 
   public static boolean setEx(DatabaseFactory db, String query, Object... vars) {

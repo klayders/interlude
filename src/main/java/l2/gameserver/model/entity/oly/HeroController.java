@@ -9,7 +9,7 @@ import l2.commons.dbutils.DbUtils;
 import l2.gameserver.Config;
 import l2.gameserver.data.StringHolder;
 import l2.gameserver.database.DatabaseFactory;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.base.ClassId;
@@ -163,7 +163,7 @@ public class HeroController {
 
   private void clearHeroes() {
     log.info("HeroController: Clearing previus season heroes.");
-    mysql.set("UPDATE `oly_heroes` SET `played` = 0, `active` = 0");
+    MysqlInitializer.set("UPDATE `oly_heroes` SET `played` = 0, `active` = 0");
     if (!this._currentHeroes.isEmpty()) {
       Iterator var1 = this._currentHeroes.iterator();
 

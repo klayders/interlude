@@ -24,7 +24,7 @@ import l2.commons.threading.RunnableImpl;
 import l2.commons.util.Rnd;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.data.xml.holder.NpcHolder;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.geodata.GeoEngine;
 import l2.gameserver.idfactory.IdFactory;
 import l2.gameserver.instancemanager.ReflectionManager;
@@ -57,8 +57,6 @@ import l2.gameserver.utils.NpcUtils;
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Reflection {
   private static final AtomicInteger _nextId = new AtomicInteger();
@@ -829,7 +827,7 @@ public class Reflection {
           if (player != null) {
             player.setInstanceReuse(this.getInstancedZoneId(), time);
           } else {
-            mysql.set("REPLACE INTO character_instances (obj_id, id, reuse) VALUES (?,?,?)", objectId, this.getInstancedZoneId(), time);
+            MysqlInitializer.set("REPLACE INTO character_instances (obj_id, id, reuse) VALUES (?,?,?)", objectId, this.getInstancedZoneId(), time);
           }
         } catch (Exception var12) {
           var12.printStackTrace();

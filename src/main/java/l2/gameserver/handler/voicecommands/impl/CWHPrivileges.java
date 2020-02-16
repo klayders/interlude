@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 import l2.gameserver.Config;
 import l2.gameserver.data.htm.HtmCache;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.instances.NpcInstance;
@@ -50,12 +50,12 @@ public class CWHPrivileges implements IVoicedCommandHandler {
                   activeChar.sendMessage(new CustomMessage("usercommandhandlers.CWHPrivileges.PrivilegeGiven", activeChar, new Object[0]));
                 }
               } else if (cm != null) {
-                int state = mysql.simple_get_int("value", "character_variables", "obj_id=" + cm.getObjectId() + " AND name LIKE 'canWhWithdraw'");
+                int state = MysqlInitializer.simple_get_int("value", "character_variables", "obj_id=" + cm.getObjectId() + " AND name LIKE 'canWhWithdraw'");
                 if (state > 0) {
-                  mysql.set("DELETE FROM `character_variables` WHERE obj_id=" + cm.getObjectId() + " AND name LIKE 'canWhWithdraw' LIMIT 1");
+                  MysqlInitializer.set("DELETE FROM `character_variables` WHERE obj_id=" + cm.getObjectId() + " AND name LIKE 'canWhWithdraw' LIMIT 1");
                   activeChar.sendMessage(new CustomMessage("usercommandhandlers.CWHPrivileges.PrivilegeRemoved", activeChar, new Object[0]));
                 } else {
-                  mysql.set("INSERT INTO character_variables  (obj_id, type, name, value, expire_time) VALUES (" + cm.getObjectId() + ",'user-var','canWhWithdraw','1',-1)");
+                  MysqlInitializer.set("INSERT INTO character_variables  (obj_id, type, name, value, expire_time) VALUES (" + cm.getObjectId() + ",'user-var','canWhWithdraw','1',-1)");
                   activeChar.sendMessage(new CustomMessage("usercommandhandlers.CWHPrivileges.PrivilegeGiven", activeChar, new Object[0]));
                 }
               } else {
@@ -73,7 +73,7 @@ public class CWHPrivileges implements IVoicedCommandHandler {
               }
 
               sb.append(") AND `name`='canWhWithdraw'");
-              List<Object> list = mysql.get_array(sb.toString());
+              List<Object> list = MysqlInitializer.get_array(sb.toString());
               sb = new StringBuilder("<html><body>Clan member Warehouse privilege<br><br><table>");
               Iterator var8 = list.iterator();
 

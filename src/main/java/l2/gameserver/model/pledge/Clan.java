@@ -12,7 +12,7 @@ import l2.gameserver.cache.CrestCache;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.data.xml.holder.ResidenceHolder;
 import l2.gameserver.database.DatabaseFactory;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.Skill;
 import l2.gameserver.model.entity.residence.Castle;
@@ -1191,7 +1191,7 @@ public class Clan implements Iterable<UnitMember> {
 
   public void setWhBonus(int i) {
     if (this._whBonus != -1) {
-      mysql.set("UPDATE `clan_data` SET `warehouse`=? WHERE `clan_id`=?", i, this.getClanId());
+      MysqlInitializer.set("UPDATE `clan_data` SET `warehouse`=? WHERE `clan_id`=?", i, this.getClanId());
     }
 
     this._whBonus = i;

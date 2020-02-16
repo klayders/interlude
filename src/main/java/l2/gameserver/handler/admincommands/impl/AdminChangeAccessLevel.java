@@ -9,7 +9,7 @@ import l2.commons.dbutils.DbUtils;
 import l2.gameserver.Announcements;
 import l2.gameserver.Config;
 import l2.gameserver.database.DatabaseFactory;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.handler.admincommands.IAdminCommandHandler;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
@@ -179,10 +179,10 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler {
 
             player.setVar("penaltyChatCount", "" + (oldPenaltyCount + count), -1L);
           } else {
-            oId = mysql.simple_get_int("obj_Id", "characters", "`char_name`='" + wordList[1] + "'");
+            oId = MysqlInitializer.simple_get_int("obj_Id", "characters", "`char_name`='" + wordList[1] + "'");
             if (oId > 0) {
-              Integer oldCount = (Integer) mysql.get("SELECT `value` FROM character_variables WHERE `obj_id` = " + oId + " AND `name` = 'penaltyChatCount'");
-              mysql.set("REPLACE INTO character_variables (obj_id, type, name, value, expire_time) VALUES (" + oId + ",'user-var','penaltyChatCount','" + (oldCount + count) + "',-1)");
+              Integer oldCount = (Integer) MysqlInitializer.get("SELECT `value` FROM character_variables WHERE `obj_id` = " + oId + " AND `name` = 'penaltyChatCount'");
+              MysqlInitializer.set("REPLACE INTO character_variables (obj_id, type, name, value, expire_time) VALUES (" + oId + ",'user-var','penaltyChatCount','" + (oldCount + count) + "',-1)");
             }
           }
 

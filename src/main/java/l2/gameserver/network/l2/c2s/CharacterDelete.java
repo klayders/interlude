@@ -8,7 +8,7 @@ package l2.gameserver.network.l2.c2s;
 import l2.commons.threading.RunnableImpl;
 import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.network.l2.GameClient;
 import l2.gameserver.network.l2.SecondPasswordAuth.SecondPasswordAuthUI;
 import l2.gameserver.network.l2.SecondPasswordAuth.SecondPasswordAuthUI.SecondPasswordAuthUIType;
@@ -91,8 +91,8 @@ public class CharacterDelete extends L2GameClientPacket {
     int obj = ((GameClient)this.getClient()).getObjectIdForSlot(this._charSlot);
     if (obj == -1) {
       return 0;
-    } else if (mysql.simple_get_int("clanid", "characters", "obj_Id=" + obj) > 0) {
-      return mysql.simple_get_int("leader_id", "clan_subpledges", "leader_id=" + obj + " AND type = " + 0) > 0 ? 2 : 1;
+    } else if (MysqlInitializer.simple_get_int("clanid", "characters", "obj_Id=" + obj) > 0) {
+      return MysqlInitializer.simple_get_int("leader_id", "clan_subpledges", "leader_id=" + obj + " AND type = " + 0) > 0 ? 2 : 1;
     } else {
       return 0;
     }
@@ -103,7 +103,7 @@ public class CharacterDelete extends L2GameClientPacket {
     if (obj == -1) {
       return 0;
     } else {
-      return mysql.simple_get_int("online", "characters", "obj_Id=" + obj) > 0 ? 1 : 0;
+      return MysqlInitializer.simple_get_int("online", "characters", "obj_Id=" + obj) > 0 ? 1 : 0;
     }
   }
 }

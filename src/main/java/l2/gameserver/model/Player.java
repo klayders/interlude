@@ -25,7 +25,7 @@ import l2.gameserver.dao.*;
 import l2.gameserver.data.xml.holder.*;
 import l2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
 import l2.gameserver.database.DatabaseFactory;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.handler.items.IItemHandler;
 import l2.gameserver.handler.items.IRefineryHandler;
 import l2.gameserver.idfactory.IdFactory;
@@ -833,7 +833,7 @@ public class Player extends Playable implements PlayerGroup {
       }
 
       if (saveDB) {
-        mysql.set("REPLACE INTO character_recipebook (char_id, id) VALUES(?,?)", this.getObjectId(), recipe.getId());
+        MysqlInitializer.set("REPLACE INTO character_recipebook (char_id, id) VALUES(?,?)", this.getObjectId(), recipe.getId());
       }
 
     }
@@ -841,10 +841,10 @@ public class Player extends Playable implements PlayerGroup {
 
   public void unregisterRecipe(int RecipeID) {
     if (this._recipebook.containsKey(RecipeID)) {
-      mysql.set("DELETE FROM `character_recipebook` WHERE `char_id`=? AND `id`=? LIMIT 1", this.getObjectId(), RecipeID);
+      MysqlInitializer.set("DELETE FROM `character_recipebook` WHERE `char_id`=? AND `id`=? LIMIT 1", this.getObjectId(), RecipeID);
       this._recipebook.remove(RecipeID);
     } else if (this._commonrecipebook.containsKey(RecipeID)) {
-      mysql.set("DELETE FROM `character_recipebook` WHERE `char_id`=? AND `id`=? LIMIT 1", this.getObjectId(), RecipeID);
+      MysqlInitializer.set("DELETE FROM `character_recipebook` WHERE `char_id`=? AND `id`=? LIMIT 1", this.getObjectId(), RecipeID);
       this._commonrecipebook.remove(RecipeID);
     } else {
       log.warn("Attempted to remove unknown RecipeList" + RecipeID);
@@ -8142,19 +8142,19 @@ public class Player extends Playable implements PlayerGroup {
     CustomMessage msg = (new CustomMessage("INSTANT_ZONE_FROM_HERE__S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_ENTRY_POSSIBLE", this)).addString(this.getName());
     this.sendMessage(msg);
     this._instancesReuses.put(id, time);
-    mysql.set("REPLACE INTO character_instances (obj_id, id, reuse) VALUES (?,?,?)", this.getObjectId(), id, time);
+    MysqlInitializer.set("REPLACE INTO character_instances (obj_id, id, reuse) VALUES (?,?,?)", this.getObjectId(), id, time);
   }
 
   public void removeInstanceReuse(int id) {
     if (this._instancesReuses.remove(id) != null) {
-      mysql.set("DELETE FROM `character_instances` WHERE `obj_id`=? AND `id`=? LIMIT 1", this.getObjectId(), id);
+      MysqlInitializer.set("DELETE FROM `character_instances` WHERE `obj_id`=? AND `id`=? LIMIT 1", this.getObjectId(), id);
     }
 
   }
 
   public void removeAllInstanceReuses() {
     this._instancesReuses.clear();
-    mysql.set("DELETE FROM `character_instances` WHERE `obj_id`=?", this.getObjectId());
+    MysqlInitializer.set("DELETE FROM `character_instances` WHERE `obj_id`=?", this.getObjectId());
   }
 
   public void removeInstanceReusesByGroupId(int groupId) {

@@ -9,7 +9,7 @@ import l2.gameserver.Config;
 import l2.gameserver.Config.RateBonusInfo;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.dao.AccountBonusDAO;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.handler.admincommands.IAdminCommandHandler;
 import l2.gameserver.model.*;
 import l2.gameserver.model.base.ClassId;
@@ -101,7 +101,7 @@ public class AdminEditChar implements IAdminCommandHandler {
           target = activeChar.getTarget();
           if (target != null && target.isPlayer()) {
             player = (Player) target;
-            if (mysql.simple_get_int("count(*)", "characters", "`char_name` like '" + msgUsage + "'") > 0) {
+            if (MysqlInitializer.simple_get_int("count(*)", "characters", "`char_name` like '" + msgUsage + "'") > 0) {
               activeChar.sendMessage("Name already exist.");
               return false;
             }
@@ -381,7 +381,7 @@ public class AdminEditChar implements IAdminCommandHandler {
                       return false;
                     }
 
-                    if (!mysql.set("update characters set createtime = UNIX_TIMESTAMP('" + date + "') where obj_Id = " + activeChar.getTarget().getObjectId())) {
+                    if (!MysqlInitializer.set("update characters set createtime = UNIX_TIMESTAMP('" + date + "') where obj_Id = " + activeChar.getTarget().getObjectId())) {
                       activeChar.sendMessage(msgUsage);
                       return false;
                     }

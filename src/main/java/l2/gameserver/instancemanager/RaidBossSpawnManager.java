@@ -12,7 +12,7 @@ import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.data.xml.holder.NpcHolder;
 import l2.gameserver.database.DatabaseFactory;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.Spawner;
@@ -273,7 +273,7 @@ public class RaidBossSpawnManager {
 
   public void updatePointsDb() {
     this.pointsLock.lock();
-    if (!mysql.set("TRUNCATE `raidboss_points`")) {
+    if (!MysqlInitializer.set("TRUNCATE `raidboss_points`")) {
       log.warn("RaidBossSpawnManager: Couldnt empty raidboss_points table");
     }
 
@@ -432,7 +432,7 @@ public class RaidBossSpawnManager {
       if (player != null) {
         clan = player.getClan();
       } else {
-        clan = ClanTable.getInstance().getClan(mysql.simple_get_int("clanid", "characters", "obj_Id=" + playerId));
+        clan = ClanTable.getInstance().getClan(MysqlInitializer.simple_get_int("clanid", "characters", "obj_Id=" + playerId));
       }
 
       if (clan != null) {

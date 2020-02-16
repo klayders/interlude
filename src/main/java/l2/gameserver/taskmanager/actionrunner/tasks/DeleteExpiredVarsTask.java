@@ -7,7 +7,7 @@ package l2.gameserver.taskmanager.actionrunner.tasks;
 
 import l2.commons.dbutils.DbUtils;
 import l2.gameserver.database.DatabaseFactory;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
 import l2.gameserver.utils.Strings;
@@ -61,7 +61,7 @@ public class DeleteExpiredVarsTask extends AutomaticTask {
           if (player != null && player.isOnline()) {
             player.unsetVar(entry.getValue());
           } else {
-            mysql.set("DELETE FROM `character_variables` WHERE `obj_id`=? AND `type`='user-var' AND `name`=? LIMIT 1", entry.getKey(), entry.getValue());
+            MysqlInitializer.set("DELETE FROM `character_variables` WHERE `obj_id`=? AND `type`='user-var' AND `name`=? LIMIT 1", entry.getKey(), entry.getValue());
           }
         }
 

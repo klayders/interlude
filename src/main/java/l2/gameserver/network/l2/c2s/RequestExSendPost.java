@@ -13,7 +13,7 @@ import java.util.Map;
 import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.dao.CharacterDAO;
-import l2.gameserver.database.mysql;
+import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.World;
@@ -150,7 +150,7 @@ public class RequestExSendPost extends L2GameClientPacket {
             }
           } else {
             recieverId = CharacterDAO.getInstance().getObjectIdByName(this._recieverName);
-            if (recieverId > 0 && mysql.simple_get_int("target_Id", "character_blocklist", "obj_Id=" + recieverId + " AND target_Id=" + activeChar.getObjectId()) > 0) {
+            if (recieverId > 0 && MysqlInitializer.simple_get_int("target_Id", "character_blocklist", "obj_Id=" + recieverId + " AND target_Id=" + activeChar.getObjectId()) > 0) {
               activeChar.sendPacket((new SystemMessage(1228)).addString(this._recieverName));
               return;
             }

@@ -10,6 +10,7 @@ import l2.commons.compiler.MemoryClassLoader;
 import l2.gameserver.Config;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.quest.Quest;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
@@ -18,6 +19,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;
+import org.springframework.core.io.ClassPathResource;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -48,20 +50,21 @@ public class Scripts {
     this.loadExt();
   }
 
+  @SneakyThrows
   private void load() {
-    log.info("Scripts: Loading...");
+    log.info("load: Scripts: Loading...");
     List<Class<?>> classes = new ArrayList<>();
     boolean result = false;
-    File f = new File("game/libs/scripts.jar");
-    if (f.exists()) {
+    var file = new ClassPathResource("libs/scripts.jar").getFile();
+    if (file.exists()) {
       JarInputStream stream = null;
       MemoryClassLoader classLoader = new MemoryClassLoader();
 
       try {
-        stream = new JarInputStream(new FileInputStream(f));
+        stream = new JarInputStream(new FileInputStream(file));
         JarEntry entry;
 
-        while((entry = stream.getNextJarEntry()) != null) {
+        while ((entry = stream.getNextJarEntry()) != null) {
           if (!entry.getName().contains(ClassUtils.INNER_CLASS_SEPARATOR) && entry.getName().endsWith(".class")) {
             String name = entry.getName().replace(".class", "").replace("/", ".");
             Class<?> aClass = getClass().getClassLoader().loadClass(name);
@@ -86,7 +89,7 @@ public class Scripts {
     }
 
     if (!result) {
-      log.error("Scripts: Failed loading scripts!");
+      log.error("load: Failed loading Scripts! file={}", file.getAbsolutePath());
       Runtime.getRuntime().exit(0);
     } else {
       log.info("Scripts: Loaded " + classes.size() + " classes.");
@@ -106,11 +109,11 @@ public class Scripts {
     int i = 0;
     if (extFiles != null) {
       i = extFiles.length;
-    }else {
+    } else {
       log.error("loadExt: Extensions: error load!, extFiles empty");
     }
 
-    for(int var6 = 0; var6 < i; ++var6) {
+    for (int var6 = 0; var6 < i; ++var6) {
       File extFile = extFiles[var6];
       if (extFile.exists()) {
         JarInputStream stream = null;
@@ -120,7 +123,7 @@ public class Scripts {
           stream = new JarInputStream(new FileInputStream(extFile));
           JarEntry entry;
 
-          while((entry = stream.getNextJarEntry()) != null) {
+          while ((entry = stream.getNextJarEntry()) != null) {
             if (!entry.getName().startsWith("java/") && !entry.getName().startsWith("auth/src/main/java/l2/authserver") && !entry.getName().startsWith("l2/commons") && !entry.getName().startsWith("l2/gameserver") && !entry.getName().contains(ClassUtils.INNER_CLASS_SEPARATOR) && entry.getName().endsWith(".class")) {
               String name = entry.getName().replace(".class", "").replace("/", ".");
               Class<?> clazz = classLoader.loadClass(name);
@@ -146,7 +149,7 @@ public class Scripts {
 
     log.info("Extensions: Loaded " + classes.size() + " extension classes.");
 
-    for(i = 0; i < classes.size(); ++i) {
+    for (i = 0; i < classes.size(); ++i) {
       Class<?> clazz = classes.get(i);
       this._classes.put(clazz.getName(), clazz);
     }
@@ -327,7 +330,7 @@ public class Scripts {
       List<String> toRemove = new ArrayList<>();
       Iterator<Entry<String, ScriptClassAndMethod>> var9 = onAction.entrySet().iterator();
       Entry<String, ScriptClassAndMethod> entry;
-      while(var9.hasNext()) {
+      while (var9.hasNext()) {
         entry = var9.next();
         if (entry.getValue().className.equals(script.getName())) {
           toRemove.add(entry.getKey());
@@ -337,7 +340,7 @@ public class Scripts {
       Iterator<String> stringIterator = toRemove.iterator();
 
       String key;
-      while(stringIterator.hasNext()) {
+      while (stringIterator.hasNext()) {
         key = stringIterator.next();
         onAction.remove(key);
       }
@@ -406,11 +409,11 @@ public class Scripts {
       if (variables != null && !variables.isEmpty()) {
         field = variables.entrySet().iterator();
 
-        while(field.hasNext()) {
-          Entry param = (Entry)field.next();
+        while (field.hasNext()) {
+          Entry param = (Entry) field.next();
 
           try {
-            FieldUtils.writeField(o, (String)param.getKey(), param.getValue());
+            FieldUtils.writeField(o, (String) param.getKey(), param.getValue());
           } catch (Exception var12) {
             log.error("Scripts: Failed setting fields for " + clazz.getName(), var12);
           }
@@ -434,7 +437,7 @@ public class Scripts {
       try {
         Class<?>[] parameterTypes = new Class[args.length];
 
-        for(int i = 0; i < args.length; ++i) {
+        for (int i = 0; i < args.length; ++i) {
           parameterTypes[i] = args[i] != null ? args[i].getClass() : null;
         }
 

@@ -6,14 +6,14 @@
     on
     <set name="enabled" val="true" />
 
-    For enabling pvp counting in zone - follow gameserver/config/pvp.properties PvPCountingInFunZone = True
+    For enabling pvp counting in zone - follow gameserver/game/pvp.properties PvPCountingInFunZone = True
     -->
     <!-- Для включения AOE Fun зоны к какому либо РБ - всех или отдельно, необходимо их включить. По умполчанию они выключены
      <set name="enabled" val="false" />
      на
      <set name="enabled" val="true" />
 
-     Что бы в зоне засчитывалось ПвП влючите конфиг - gameserver/config/pvp.properties PvPCountingInFunZone = True
+     Что бы в зоне засчитывалось ПвП влючите конфиг - gameserver/game/pvp.properties PvPCountingInFunZone = True
      -->
     <zone name="[ice_fairy_sirr_epic_fun]" type="fun" >
         <set name="enabled" val="false" />

@@ -13,12 +13,6 @@
 
 
   <build>
-    <resources>
-      <resource>
-        <filtering>true</filtering>
-        <directory>src/main/resources</directory>
-      </resource>
-    </resources>
 
     <plugins>
       <plugin>
@@ -41,14 +35,14 @@
       <artifactId>napile</artifactId>
       <version>1.0</version>
       <scope>system</scope>
-      <systemPath>${pom.basedir}/libs/org.napile.primitive.jar</systemPath>
+      <systemPath>${pom.basedir}/src/main/resources/libs/org.napile.primitive.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>scripts</groupId>
       <artifactId>scripts</artifactId>
       <version>1.0</version>
       <scope>system</scope>
-      <systemPath>${pom.basedir}/libs/scripts.jar</systemPath>
+      <systemPath>${pom.basedir}/src/main/resources/libs/scripts.jar</systemPath>
     </dependency>
 
   </dependencies>

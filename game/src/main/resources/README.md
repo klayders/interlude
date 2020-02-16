@@ -1,4 +1,4 @@
 # ABOUT RESOURCES
 
-Because **script.jar**  need package config, added new package for 
+Because **script.jar**  search package config, added new package for 
 pvpcommunityboard.properties

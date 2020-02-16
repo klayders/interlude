@@ -17,6 +17,7 @@ import l2.gameserver.utils.MapUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.core.io.ClassPathResource;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -47,7 +48,10 @@ public class Announcements {
     this._announcements.clear();
 
     try {
-      String[] lines = FileUtils.readFileToString(new File("config/announcements.txt"), "UTF-8").split("\n");
+      var lines = FileUtils.readFileToString(
+        new ClassPathResource("game/announcements.txt").getFile(),
+        "UTF-8"
+      ).split("\n");
 
       for (String line : lines) {
         if (!StringUtils.isEmpty(line)) {
@@ -60,7 +64,7 @@ public class Announcements {
         }
       }
     } catch (Exception var5) {
-      log.error("Error while loading config/announcements.txt!");
+      log.error("Error while loading game/announcements.txt!");
     }
 
   }
@@ -94,7 +98,7 @@ public class Announcements {
 
   private void saveToDisk() {
     try {
-      File f = new File("config/announcements.txt");
+      File f = new File("game/announcements.txt");
       FileWriter writer = new FileWriter(f, false);
 
       for (Announce announce : this._announcements) {
@@ -103,7 +107,7 @@ public class Announcements {
 
       writer.close();
     } catch (Exception var5) {
-      log.error("Error while saving config/announcements.txt!", var5);
+      log.error("Error while saving game/announcements.txt!", var5);
     }
 
   }

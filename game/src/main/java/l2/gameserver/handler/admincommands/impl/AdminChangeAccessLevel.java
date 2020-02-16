@@ -65,31 +65,31 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler {
             }
 
             String newFName = "m" + modAdd.getObjectId() + ".xml";
-            if (!Files.copyFile("config/GMAccess.d/template/moderator.xml", "config/GMAccess.d/" + newFName)) {
+            if (!Files.copyFile("game/GMAccess.d/template/moderator.xml", "game/GMAccess.d/" + newFName)) {
               activeChar.sendMessage("Error: Failed to copy access-file.");
               showModersPannel(activeChar);
               return false;
             }
 
-            String res = "";
+            StringBuilder res = new StringBuilder();
 
             try {
-              BufferedReader in = new BufferedReader(new FileReader("config/GMAccess.d/" + newFName));
+              BufferedReader in = new BufferedReader(new FileReader("game/GMAccess.d/" + newFName));
 
               while (true) {
                 String str;
                 if ((str = in.readLine()) == null) {
                   in.close();
-                  res = res.replaceFirst("ObjIdPlayer", "" + modAdd.getObjectId());
-                  Files.writeFile("config/GMAccess.d/" + newFName, res);
+                  res = new StringBuilder(res.toString().replaceFirst("ObjIdPlayer", "" + modAdd.getObjectId()));
+                  Files.writeFile("game/GMAccess.d/" + newFName, res.toString());
                   break;
                 }
 
-                res = res + str + "\n";
+                res.append(str).append("\n");
               }
             } catch (Exception var20) {
               activeChar.sendMessage("Error: Failed to modify object ID in access-file.");
-              File fDel = new File("config/GMAccess.d/" + newFName);
+              File fDel = new File("game/GMAccess.d/" + newFName);
               if (fDel.exists()) {
                 fDel.delete();
               }
@@ -98,7 +98,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler {
               return false;
             }
 
-            File af = new File("config/GMAccess.d/" + newFName);
+            File af = new File("game/GMAccess.d/" + newFName);
             if (!af.exists()) {
               activeChar.sendMessage("Error: Failed to read access-file for " + modAdd.getName());
               showModersPannel(activeChar);
@@ -131,7 +131,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler {
             }
 
             String fname = "m" + oid + ".xml";
-            File f = new File("config/GMAccess.d/" + fname);
+            File f = new File("game/GMAccess.d/" + fname);
             if (f.exists() && f.isFile() && f.delete()) {
               if (modDel != null) {
                 activeChar.sendMessage("Moderator " + modDel.getName() + " deleted.");
@@ -202,7 +202,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler {
   private static void showModersPannel(Player activeChar) {
     NpcHtmlMessage reply = new NpcHtmlMessage(5);
     String html = "Moderators managment panel.<br>";
-    File dir = new File("config/GMAccess.d/");
+    File dir = new File("game/GMAccess.d/");
     if (dir.exists() && dir.isDirectory()) {
       html = html + "<p align=right>";
       html = html + "<button width=120 height=20 back=\"sek.cbui94\" fore=\"sek.cbui94\" action=\"bypass -h admin_moders_add\" value=\"Add modrator\">";

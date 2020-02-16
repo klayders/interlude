@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
-To activate the auto announcement, you must enable it in the /config/services.properties
+To activate the auto announcement, you must enable it in the /game/services.properties
 change ServiceAutoAnnounce = False on True
 -->
 <list>

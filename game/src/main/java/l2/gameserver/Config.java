@@ -2445,7 +2445,7 @@ public class Config {
     try {
       return load(new ClassPathResource(filename).getFile());
     } catch (IOException e) {
-      log.error("NOT LOAD FILE FROM classPath");
+      log.error("load: error load from classPath, fileName={}", filename);
       return null;
     }
   }

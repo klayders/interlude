@@ -528,14 +528,12 @@ public class PrintfFormat {
     }
 
     String internalsprintf(Object s) {
-      String s2 = "";
       if (this.conversionCharacter != 's' && this.conversionCharacter != 'S') {
-        log.error("internalsprintf: WE HAVE A PROBLEM!");
-        return s2;
+        log.warn("internalsprintf: Cannot format a String with a format using a " + this.conversionCharacter + " conversion character.");
+        return "";
 //        throw new IllegalArgumentException("Cannot format a String with a format using a " + this.conversionCharacter + " conversion character.");
       } else {
-        s2 = this.printSFormat(s.toString());
-        return s2;
+        return this.printSFormat(s.toString());
       }
     }
 

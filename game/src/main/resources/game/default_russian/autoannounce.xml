@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!--
-Для активации авто анонса необходимо его включить в /config/services.properties
+Для активации авто анонса необходимо его включить в /game/services.properties
 изменив ServiceAutoAnnounce = False на True
 -->
 <list>

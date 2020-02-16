@@ -5,65 +5,58 @@
 
 package l2.gameserver.handler.admincommands.impl;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.StringTokenizer;
 import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.handler.admincommands.IAdminCommandHandler;
-import l2.gameserver.model.Creature;
 import l2.gameserver.model.GameObject;
 import l2.gameserver.model.Player;
-import l2.gameserver.model.Skill;
 import l2.gameserver.model.instances.NpcInstance;
-import l2.gameserver.network.l2.s2c.EventTrigger;
-import l2.gameserver.network.l2.s2c.ExChangeClientEffectInfo;
-import l2.gameserver.network.l2.s2c.ExSendUIEvent;
-import l2.gameserver.network.l2.s2c.L2GameServerPacket;
-import l2.gameserver.network.l2.s2c.NpcHtmlMessage;
-import l2.gameserver.network.l2.s2c.PlaySound;
+import l2.gameserver.network.l2.s2c.*;
 import l2.gameserver.scripts.Functions;
 import l2.gameserver.stats.Stats;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.math.NumberUtils;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+
+@Slf4j
 public class AdminAdmin implements IAdminCommandHandler {
   public AdminAdmin() {
   }
 
   public boolean useAdminCommand(Enum comm, String[] wordList, String fullString, Player activeChar) {
-    AdminAdmin.Commands command = (AdminAdmin.Commands)comm;
+    AdminAdmin.Commands command = (AdminAdmin.Commands) comm;
     String html;
     if (!activeChar.getPlayerAccess().Menu) {
       if (activeChar.getPlayerAccess().CanTeleport) {
-        switch(command) {
-          case admin_show_html:
-            html = wordList[1];
+        if (command == Commands.admin_show_html) {
+          html = wordList[1];
 
-            try {
-              if (html != null) {
-                if (html.startsWith("tele")) {
-                  activeChar.sendPacket((new NpcHtmlMessage(5)).setFile("admin/" + html));
-                } else {
-                  activeChar.sendMessage("Access denied");
-                }
+          try {
+            if (html != null) {
+              if (html.startsWith("tele")) {
+                activeChar.sendPacket((new NpcHtmlMessage(5)).setFile("admin/" + html));
               } else {
-                activeChar.sendMessage("Html page not found");
+                activeChar.sendMessage("Access denied");
               }
-            } catch (Exception var41) {
+            } else {
               activeChar.sendMessage("Html page not found");
             }
-          default:
-            return true;
+          } catch (Exception var41) {
+            activeChar.sendMessage("Html page not found");
+          }
         }
+        return true;
       } else {
         return false;
       }
     } else {
       int triggerid;
-      switch(command) {
+      switch (command) {
         case admin_admin:
           activeChar.sendPacket((new NpcHtmlMessage(5)).setFile("admin/admin.htm"));
           break;
@@ -73,14 +66,16 @@ public class AdminAdmin implements IAdminCommandHandler {
           } else {
             try {
               activeChar.sendPacket((new NpcHtmlMessage(5)).setFile("admin/songs/songs" + wordList[1] + ".htm"));
-            } catch (StringIndexOutOfBoundsException var40) {
+            } catch (StringIndexOutOfBoundsException e) {
+              log.error("useAdminCommand: admin_play_sounds:  wordList={}, fullString={}", wordList, fullString);
             }
           }
           break;
         case admin_play_sound:
           try {
             this.playAdminSound(activeChar, wordList[1]);
-          } catch (StringIndexOutOfBoundsException var39) {
+          } catch (StringIndexOutOfBoundsException e) {
+            log.error("useAdminCommand: admin_play_sound:  wordList={}, fullString={}", wordList, fullString);
           }
           break;
         case admin_silence:
@@ -88,7 +83,6 @@ public class AdminAdmin implements IAdminCommandHandler {
             activeChar.unsetVar("gm_silence");
             activeChar.setMessageRefusal(false);
             activeChar.sendPacket(Msg.MESSAGE_ACCEPTANCE_MODE);
-            activeChar.sendEtcStatusUpdate();
           } else {
             if (Config.SAVE_GM_EFFECTS) {
               activeChar.setVar("gm_silence", "true", -1L);
@@ -96,8 +90,8 @@ public class AdminAdmin implements IAdminCommandHandler {
 
             activeChar.setMessageRefusal(true);
             activeChar.sendPacket(Msg.MESSAGE_REFUSAL_MODE);
-            activeChar.sendEtcStatusUpdate();
           }
+          activeChar.sendEtcStatusUpdate();
           break;
         case admin_tradeoff:
           try {
@@ -150,7 +144,7 @@ public class AdminAdmin implements IAdminCommandHandler {
             return false;
           }
 
-          NpcInstance npc = (NpcInstance)target;
+          NpcInstance npc = (NpcInstance) target;
           npc.setNpcState(state);
           break;
         case admin_setareanpcstate:
@@ -159,10 +153,8 @@ public class AdminAdmin implements IAdminCommandHandler {
             String[] vals = val.split(" ");
             triggerid = NumberUtils.toInt(vals[0], 0);
             int astate = vals.length > 1 ? NumberUtils.toInt(vals[1], 0) : 0;
-            Iterator var47 = activeChar.getAroundNpc(triggerid, 200).iterator();
 
-            while(var47.hasNext()) {
-              NpcInstance n = (NpcInstance)var47.next();
+            for (NpcInstance n : activeChar.getAroundNpc(triggerid, 200)) {
               n.setNpcState(astate);
             }
 
@@ -201,7 +193,7 @@ public class AdminAdmin implements IAdminCommandHandler {
             return false;
           }
 
-          activeChar.broadcastPacket(new L2GameServerPacket[]{new ExChangeClientEffectInfo(stateid)});
+          activeChar.broadcastPacket(new ExChangeClientEffectInfo(stateid));
           break;
         case admin_eventtrigger:
           if (wordList.length < 2) {
@@ -216,7 +208,7 @@ public class AdminAdmin implements IAdminCommandHandler {
             return false;
           }
 
-          activeChar.broadcastPacket(new L2GameServerPacket[]{new EventTrigger(triggerid, true)});
+          activeChar.broadcastPacket(new EventTrigger(triggerid, true));
           break;
         case admin_debug:
           GameObject ob = activeChar.getTarget();
@@ -228,53 +220,51 @@ public class AdminAdmin implements IAdminCommandHandler {
           Player pl = ob.getPlayer();
           List<String> _s = new ArrayList<>();
           _s.add("==========TARGET STATS:");
-          _s.add("==Magic Resist: " + pl.calcStat(Stats.MAGIC_RESIST, (Creature)null, (Skill)null));
-          _s.add("==Magic Power: " + pl.calcStat(Stats.MAGIC_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Skill Power: " + pl.calcStat(Stats.SKILL_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Cast Break Rate: " + pl.calcStat(Stats.CAST_INTERRUPT, 1.0D, (Creature)null, (Skill)null));
+          _s.add("==Magic Resist: " + pl.calcStat(Stats.MAGIC_RESIST, null, null));
+          _s.add("==Magic Power: " + pl.calcStat(Stats.MAGIC_POWER, 1.0D, null, null));
+          _s.add("==Skill Power: " + pl.calcStat(Stats.SKILL_POWER, 1.0D, null, null));
+          _s.add("==Cast Break Rate: " + pl.calcStat(Stats.CAST_INTERRUPT, 1.0D, null, null));
           _s.add("==========Powers:");
-          _s.add("==Bleed: " + pl.calcStat(Stats.BLEED_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Poison: " + pl.calcStat(Stats.POISON_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Stun: " + pl.calcStat(Stats.STUN_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Root: " + pl.calcStat(Stats.ROOT_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Mental: " + pl.calcStat(Stats.MENTAL_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Sleep: " + pl.calcStat(Stats.SLEEP_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Paralyze: " + pl.calcStat(Stats.PARALYZE_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Cancel: " + pl.calcStat(Stats.CANCEL_POWER, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Debuff: " + pl.calcStat(Stats.DEBUFF_POWER, 1.0D, (Creature)null, (Skill)null));
+          _s.add("==Bleed: " + pl.calcStat(Stats.BLEED_POWER, 1.0D, null, null));
+          _s.add("==Poison: " + pl.calcStat(Stats.POISON_POWER, 1.0D, null, null));
+          _s.add("==Stun: " + pl.calcStat(Stats.STUN_POWER, 1.0D, null, null));
+          _s.add("==Root: " + pl.calcStat(Stats.ROOT_POWER, 1.0D, null, null));
+          _s.add("==Mental: " + pl.calcStat(Stats.MENTAL_POWER, 1.0D, null, null));
+          _s.add("==Sleep: " + pl.calcStat(Stats.SLEEP_POWER, 1.0D, null, null));
+          _s.add("==Paralyze: " + pl.calcStat(Stats.PARALYZE_POWER, 1.0D, null, null));
+          _s.add("==Cancel: " + pl.calcStat(Stats.CANCEL_POWER, 1.0D, null, null));
+          _s.add("==Debuff: " + pl.calcStat(Stats.DEBUFF_POWER, 1.0D, null, null));
           _s.add("==========PvP Stats:");
-          _s.add("==Phys Attack Dmg: " + pl.calcStat(Stats.PVP_PHYS_DMG_BONUS, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Phys Skill Dmg: " + pl.calcStat(Stats.PVP_PHYS_SKILL_DMG_BONUS, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Magic Skill Dmg: " + pl.calcStat(Stats.PVP_MAGIC_SKILL_DMG_BONUS, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Phys Attack Def: " + pl.calcStat(Stats.PVP_PHYS_DEFENCE_BONUS, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Phys Skill Def: " + pl.calcStat(Stats.PVP_PHYS_SKILL_DEFENCE_BONUS, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Magic Skill Def: " + pl.calcStat(Stats.PVP_MAGIC_SKILL_DEFENCE_BONUS, 1.0D, (Creature)null, (Skill)null));
+          _s.add("==Phys Attack Dmg: " + pl.calcStat(Stats.PVP_PHYS_DMG_BONUS, 1.0D, null, null));
+          _s.add("==Phys Skill Dmg: " + pl.calcStat(Stats.PVP_PHYS_SKILL_DMG_BONUS, 1.0D, null, null));
+          _s.add("==Magic Skill Dmg: " + pl.calcStat(Stats.PVP_MAGIC_SKILL_DMG_BONUS, 1.0D, null, null));
+          _s.add("==Phys Attack Def: " + pl.calcStat(Stats.PVP_PHYS_DEFENCE_BONUS, 1.0D, null, null));
+          _s.add("==Phys Skill Def: " + pl.calcStat(Stats.PVP_PHYS_SKILL_DEFENCE_BONUS, 1.0D, null, null));
+          _s.add("==Magic Skill Def: " + pl.calcStat(Stats.PVP_MAGIC_SKILL_DEFENCE_BONUS, 1.0D, null, null));
           _s.add("==========Reflects:");
-          _s.add("==Phys Dmg Chance: " + pl.calcStat(Stats.REFLECT_AND_BLOCK_DAMAGE_CHANCE, (Creature)null, (Skill)null));
-          _s.add("==Phys Skill Dmg Chance: " + pl.calcStat(Stats.REFLECT_AND_BLOCK_PSKILL_DAMAGE_CHANCE, (Creature)null, (Skill)null));
-          _s.add("==Magic Skill Dmg Chance: " + pl.calcStat(Stats.REFLECT_AND_BLOCK_MSKILL_DAMAGE_CHANCE, (Creature)null, (Skill)null));
-          _s.add("==Counterattack: Phys Dmg Chance: " + pl.calcStat(Stats.REFLECT_DAMAGE_PERCENT, (Creature)null, (Skill)null));
-          _s.add("==Counterattack: Phys Skill Dmg Chance: " + pl.calcStat(Stats.REFLECT_PSKILL_DAMAGE_PERCENT, (Creature)null, (Skill)null));
-          _s.add("==Counterattack: Magic Skill Dmg Chance: " + pl.calcStat(Stats.REFLECT_MSKILL_DAMAGE_PERCENT, (Creature)null, (Skill)null));
+          _s.add("==Phys Dmg Chance: " + pl.calcStat(Stats.REFLECT_AND_BLOCK_DAMAGE_CHANCE, null, null));
+          _s.add("==Phys Skill Dmg Chance: " + pl.calcStat(Stats.REFLECT_AND_BLOCK_PSKILL_DAMAGE_CHANCE, null, null));
+          _s.add("==Magic Skill Dmg Chance: " + pl.calcStat(Stats.REFLECT_AND_BLOCK_MSKILL_DAMAGE_CHANCE, null, null));
+          _s.add("==Counterattack: Phys Dmg Chance: " + pl.calcStat(Stats.REFLECT_DAMAGE_PERCENT, null, null));
+          _s.add("==Counterattack: Phys Skill Dmg Chance: " + pl.calcStat(Stats.REFLECT_PSKILL_DAMAGE_PERCENT, null, null));
+          _s.add("==Counterattack: Magic Skill Dmg Chance: " + pl.calcStat(Stats.REFLECT_MSKILL_DAMAGE_PERCENT, null, null));
           _s.add("==========MP Consume Rate:");
-          _s.add("==Magic Skills: " + pl.calcStat(Stats.MP_MAGIC_SKILL_CONSUME, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Phys Skills: " + pl.calcStat(Stats.MP_PHYSICAL_SKILL_CONSUME, 1.0D, (Creature)null, (Skill)null));
-          _s.add("==Music: " + pl.calcStat(Stats.MP_DANCE_SKILL_CONSUME, 1.0D, (Creature)null, (Skill)null));
+          _s.add("==Magic Skills: " + pl.calcStat(Stats.MP_MAGIC_SKILL_CONSUME, 1.0D, null, null));
+          _s.add("==Phys Skills: " + pl.calcStat(Stats.MP_PHYSICAL_SKILL_CONSUME, 1.0D, null, null));
+          _s.add("==Music: " + pl.calcStat(Stats.MP_DANCE_SKILL_CONSUME, 1.0D, null, null));
           _s.add("==========Shield:");
-          _s.add("==Shield Defence: " + pl.calcStat(Stats.SHIELD_DEFENCE, (Creature)null, (Skill)null));
-          _s.add("==Shield Defence Rate: " + pl.calcStat(Stats.SHIELD_RATE, (Creature)null, (Skill)null));
-          _s.add("==Shield Defence Angle: " + pl.calcStat(Stats.SHIELD_ANGLE, (Creature)null, (Skill)null));
+          _s.add("==Shield Defence: " + pl.calcStat(Stats.SHIELD_DEFENCE, null, null));
+          _s.add("==Shield Defence Rate: " + pl.calcStat(Stats.SHIELD_RATE, null, null));
+          _s.add("==Shield Defence Angle: " + pl.calcStat(Stats.SHIELD_ANGLE, null, null));
           _s.add("==========Etc:");
-          _s.add("==Fatal Blow Rate: " + pl.calcStat(Stats.FATALBLOW_RATE, (Creature)null, (Skill)null));
-          _s.add("==Phys Skill Evasion Rate: " + pl.calcStat(Stats.PSKILL_EVASION, (Creature)null, (Skill)null));
-          _s.add("==Counterattack Rate: " + pl.calcStat(Stats.COUNTER_ATTACK, (Creature)null, (Skill)null));
-          _s.add("==Pole Attack Angle: " + pl.calcStat(Stats.POLE_ATTACK_ANGLE, (Creature)null, (Skill)null));
-          _s.add("==Pole Target Count: " + pl.calcStat(Stats.POLE_TARGET_COUNT, 1.0D, (Creature)null, (Skill)null));
+          _s.add("==Fatal Blow Rate: " + pl.calcStat(Stats.FATALBLOW_RATE, null, null));
+          _s.add("==Phys Skill Evasion Rate: " + pl.calcStat(Stats.PSKILL_EVASION, null, null));
+          _s.add("==Counterattack Rate: " + pl.calcStat(Stats.COUNTER_ATTACK, null, null));
+          _s.add("==Pole Attack Angle: " + pl.calcStat(Stats.POLE_ATTACK_ANGLE, null, null));
+          _s.add("==Pole Target Count: " + pl.calcStat(Stats.POLE_TARGET_COUNT, 1.0D, null, null));
           _s.add("==========DONE.");
-          Iterator var49 = _s.iterator();
 
-          while(var49.hasNext()) {
-            String s = (String)var49.next();
+          for (String s : _s) {
             Functions.sendDebugMessage(activeChar, s);
           }
 
@@ -301,7 +291,7 @@ public class AdminAdmin implements IAdminCommandHandler {
             return false;
           }
 
-          activeChar.broadcastPacket(new L2GameServerPacket[]{new ExSendUIEvent(activeChar, hide, increase, startTime, endTime, new String[]{text})});
+          activeChar.broadcastPacket(new ExSendUIEvent(activeChar, hide, increase, startTime, endTime, text));
           break;
         case admin_forcenpcinfo:
           GameObject obj2 = activeChar.getTarget();
@@ -310,7 +300,7 @@ public class AdminAdmin implements IAdminCommandHandler {
             return false;
           }
 
-          ((NpcInstance)obj2).broadcastCharInfo();
+          ((NpcInstance) obj2).broadcastCharInfo();
           break;
         case admin_loc:
           Functions.sendDebugMessage(activeChar, "Coords: X:" + activeChar.getLoc().x + " Y:" + activeChar.getLoc().y + " Z:" + activeChar.getLoc().z + " H:" + activeChar.getLoc().h);
@@ -360,9 +350,11 @@ public class AdminAdmin implements IAdminCommandHandler {
               FileWriter writer = new FileWriter(f, true);
               writer.write("Loc: " + activeChar.getLoc().x + ", " + activeChar.getLoc().y + ", " + activeChar.getLoc().z + "\n");
               writer.close();
-            } catch (Exception var30) {
+            } catch (Exception e) {
+              log.error("useAdminCommand: eMessage={}, eClass={}, eDetails={}", e.getMessage(), e.getClass(), e.getCause());
             }
-          } catch (Exception var31) {
+          } catch (Exception e) {
+            log.error("useAdminCommand: eMessage={}, eClass={}, eDetails={}", e.getMessage(), e.getClass(), e.getCause());
           }
           break;
         case admin_undying:
@@ -384,12 +376,12 @@ public class AdminAdmin implements IAdminCommandHandler {
   }
 
   public void playAdminSound(Player activeChar, String sound) {
-    activeChar.broadcastPacket(new L2GameServerPacket[]{new PlaySound(sound)});
+    activeChar.broadcastPacket(new PlaySound(sound));
     activeChar.sendPacket((new NpcHtmlMessage(5)).setFile("admin/admin.htm"));
     activeChar.sendMessage("Playing " + sound + ".");
   }
 
-  private static enum Commands {
+  private enum Commands {
     admin_admin,
     admin_play_sounds,
     admin_play_sound,
@@ -412,7 +404,7 @@ public class AdminAdmin implements IAdminCommandHandler {
     admin_locdump,
     admin_undying;
 
-    private Commands() {
+    Commands() {
     }
   }
 }

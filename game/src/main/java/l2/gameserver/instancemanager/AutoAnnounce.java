@@ -53,7 +53,7 @@ public class AutoAnnounce implements Runnable {
       DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
       factory.setValidating(false);
       factory.setIgnoringComments(true);
-      File file = new File("./config/autoannounce.xml");
+      File file = new File("./game/autoannounce.xml");
       if (!file.exists()) {
         if (Config.DEBUG) {
           System.out.println("AutoAnnounce: NO FILE");
@@ -77,9 +77,9 @@ public class AutoAnnounce implements Runnable {
         ++counterAnnounce;
       }
 
-      for(Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
+      for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling()) {
         if ("list".equalsIgnoreCase(n.getNodeName())) {
-          for(Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
+          for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling()) {
             if ("announce".equalsIgnoreCase(d.getNodeName())) {
               ArrayList<String> msg = new ArrayList<>();
               NamedNodeMap attrs = d.getAttributes();
@@ -96,7 +96,7 @@ public class AutoAnnounce implements Runnable {
               GWAutoAnnounce aa = new GWAutoAnnounce(counterAnnounce);
               aa.setScreenAnnounce(isScreenMessage);
 
-              for(Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
+              for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
                 if ("message".equalsIgnoreCase(cd.getNodeName())) {
                   msg.add(String.valueOf(cd.getAttributes().getNamedItem("text").getNodeValue()));
                 }
@@ -121,15 +121,15 @@ public class AutoAnnounce implements Runnable {
 
   public void run() {
     if (_lists.size() > 1) {
-      for(int i = 1; i < _lists.size(); ++i) {
+      for (int i = 1; i < _lists.size(); ++i) {
         GWAutoAnnounce item = _lists.get(i);
         if (item.canAnnounce()) {
           ArrayList<String> msg = item.getMessage();
           Iterator var4 = msg.iterator();
 
-          while(true) {
-            while(var4.hasNext()) {
-              String text = (String)var4.next();
+          while (true) {
+            while (var4.hasNext()) {
+              String text = (String) var4.next();
               if (!item.isScreenAnnounce()) {
                 Announcements.getInstance().announceToAll(text);
               } else {

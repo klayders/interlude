@@ -52,7 +52,7 @@ public final class ItemHolder extends AbstractHolder {
   public ItemTemplate getTemplate(int id) {
     ItemTemplate item = ArrayUtils.valid(this._allTemplates, id);
     if (item == null) {
-      log.warn("Not defined item id : " + id + ", or out of range!", new Exception());
+      log.warn("getTemplate: Not defined item id : " + id + ", or out of range!");
       return null;
     } else {
       return this._allTemplates[id];

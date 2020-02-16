@@ -52,7 +52,7 @@ public class Scripts {
     log.info("Scripts: Loading...");
     List<Class<?>> classes = new ArrayList<>();
     boolean result = false;
-    File f = new File("scripts.jar");
+    File f = new File("game/libs/scripts.jar");
     if (f.exists()) {
       JarInputStream stream = null;
       MemoryClassLoader classLoader = new MemoryClassLoader();

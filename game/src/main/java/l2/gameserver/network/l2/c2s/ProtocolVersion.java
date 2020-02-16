@@ -5,7 +5,7 @@
 
 package l2.gameserver.network.l2.c2s;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.network.l2.s2c.KeyPacket;
 import l2.gameserver.network.l2.s2c.SendStatus;
 import lombok.extern.slf4j.Slf4j;

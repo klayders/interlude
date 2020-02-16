@@ -5,7 +5,7 @@
 
 package l2.gameserver.utils;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 

@@ -10,7 +10,7 @@ import l2.commons.lang.reference.HardReference;
 import l2.commons.math.random.RndSelector;
 import l2.commons.threading.RunnableImpl;
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.data.xml.holder.NpcHolder;
 import l2.gameserver.geodata.GeoEngine;

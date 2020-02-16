@@ -9,7 +9,7 @@ import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.Iterator;
 import java.util.Set;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 
 public enum PlayerClass {
   HumanFighter(Race.human, ClassType.Fighter, ClassLevel.First),

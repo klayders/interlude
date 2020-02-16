@@ -5,7 +5,7 @@
 
 package l2.gameserver.network.l2.c2s;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.dao.CharacterDAO;
 import l2.gameserver.dao.CharacterPostFriendDAO;
 import l2.gameserver.model.Player;

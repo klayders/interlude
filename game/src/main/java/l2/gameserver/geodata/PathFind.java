@@ -7,7 +7,7 @@ package l2.gameserver.geodata;
 
 import java.util.ArrayList;
 import java.util.List;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.geodata.PathFindBuffers.GeoNode;
 import l2.gameserver.geodata.PathFindBuffers.PathFindBuffer;
 import l2.gameserver.utils.Location;

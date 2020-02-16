@@ -5,7 +5,7 @@
 
 package l2.gameserver.model.instances;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.templates.npc.NpcTemplate;
 
 public class SpecialMonsterInstance extends MonsterInstance {

@@ -7,7 +7,7 @@ package l2.gameserver.network.telnet.commands;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.network.telnet.TelnetCommand;
 import l2.gameserver.network.telnet.TelnetCommandHolder;
 

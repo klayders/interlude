@@ -6,7 +6,7 @@
 package l2.gameserver.network.l2;
 
 import l2.commons.net.nio.impl.*;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.network.l2.c2s.*;
 import lombok.extern.slf4j.Slf4j;

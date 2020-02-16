@@ -6,7 +6,7 @@
 package l2.gameserver.utils;
 
 import java.util.Iterator;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.instancemanager.ReflectionManager;
 import l2.gameserver.model.Player;

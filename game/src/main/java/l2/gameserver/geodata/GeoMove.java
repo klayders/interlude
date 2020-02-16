@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.utils.Location;
 import l2.gameserver.utils.PositionUtils;
 

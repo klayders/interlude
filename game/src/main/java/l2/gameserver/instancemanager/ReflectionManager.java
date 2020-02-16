@@ -45,7 +45,7 @@ public class ReflectionManager {
 
     Reflection var2;
     try {
-      var2 = (Reflection)this._reflections.get(id);
+      var2 = this._reflections.get(id);
     } finally {
       this.readLock.unlock();
     }
@@ -58,7 +58,7 @@ public class ReflectionManager {
 
     Reflection var2;
     try {
-      var2 = (Reflection)this._reflections.put(ref.getId(), ref);
+      var2 = this._reflections.put(ref.getId(), ref);
     } finally {
       this.writeLock.unlock();
     }
@@ -71,7 +71,7 @@ public class ReflectionManager {
 
     Reflection var2;
     try {
-      var2 = (Reflection)this._reflections.remove(ref.getId());
+      var2 = this._reflections.remove(ref.getId());
     } finally {
       this.writeLock.unlock();
     }
@@ -84,7 +84,7 @@ public class ReflectionManager {
 
     Reflection[] var1;
     try {
-      var1 = (Reflection[])this._reflections.getValues(new Reflection[this._reflections.size()]);
+      var1 = this._reflections.getValues(new Reflection[this._reflections.size()]);
     } finally {
       this.readLock.unlock();
     }
@@ -99,10 +99,8 @@ public class ReflectionManager {
     try {
       int i = 0;
       Reflection[] var3 = this.getAll();
-      int var4 = var3.length;
 
-      for(int var5 = 0; var5 < var4; ++var5) {
-        Reflection r = var3[var5];
+      for (Reflection r : var3) {
         if (r.getInstancedZoneId() == izId) {
           ++i;
         }

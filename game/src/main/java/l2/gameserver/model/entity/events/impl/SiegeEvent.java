@@ -9,7 +9,7 @@ import l2.commons.collections.LazyArrayList;
 import l2.commons.collections.MultiValueSet;
 import l2.commons.dao.JdbcEntityState;
 import l2.commons.lang.reference.HardReference;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.dao.SiegeClanDAO;
 import l2.gameserver.data.xml.holder.ResidenceHolder;
 import l2.gameserver.instancemanager.ReflectionManager;

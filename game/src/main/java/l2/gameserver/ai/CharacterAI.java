@@ -22,19 +22,19 @@ public class CharacterAI extends AbstractAI {
 
   protected void onIntentionIdle() {
     this.clientStopMoving();
-    this.changeIntention(CtrlIntention.AI_INTENTION_IDLE, (Object)null, (Object)null);
+    this.changeIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
   }
 
   protected void onIntentionActive() {
     this.clientStopMoving();
-    this.changeIntention(CtrlIntention.AI_INTENTION_ACTIVE, (Object)null, (Object)null);
+    this.changeIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
     this.onEvtThink();
   }
 
   protected void onIntentionAttack(Creature target) {
     this.setAttackTarget(target);
     this.clientStopMoving();
-    this.changeIntention(CtrlIntention.AI_INTENTION_ATTACK, target, (Object)null);
+    this.changeIntention(CtrlIntention.AI_INTENTION_ATTACK, target, null);
     this.onEvtThink();
   }
 
@@ -45,7 +45,7 @@ public class CharacterAI extends AbstractAI {
   }
 
   protected void onIntentionFollow(Creature target) {
-    this.changeIntention(CtrlIntention.AI_INTENTION_FOLLOW, target, (Object)null);
+    this.changeIntention(CtrlIntention.AI_INTENTION_FOLLOW, target, null);
     this.onEvtThink();
   }
 
@@ -90,11 +90,11 @@ public class CharacterAI extends AbstractAI {
       }
 
       if (this.getAttackTarget() == object) {
-        this.setAttackTarget((Creature)null);
+        this.setAttackTarget(null);
       }
 
       if (actor.getTargetId() == object.getObjectId()) {
-        actor.setTarget((GameObject)null);
+        actor.setTarget(null);
       }
 
       if (actor.getFollowTarget() == object) {
@@ -113,7 +113,7 @@ public class CharacterAI extends AbstractAI {
     actor.abortAttack(true, true);
     actor.abortCast(true, true);
     actor.stopMove();
-    actor.broadcastPacket(new L2GameServerPacket[]{new Die(actor)});
+    actor.broadcastPacket(new Die(actor));
     this.setIntention(CtrlIntention.AI_INTENTION_IDLE);
   }
 
@@ -187,11 +187,11 @@ public class CharacterAI extends AbstractAI {
   }
 
   public void addTimer(int timerId, long delay) {
-    this.addTimer(timerId, (Object)null, (Object)null, delay);
+    this.addTimer(timerId, null, null, delay);
   }
 
   public void addTimer(int timerId, Object arg1, long delay) {
-    this.addTimer(timerId, arg1, (Object)null, delay);
+    this.addTimer(timerId, arg1, null, delay);
   }
 
   public void addTimer(int timerId, Object arg1, Object arg2, long delay) {

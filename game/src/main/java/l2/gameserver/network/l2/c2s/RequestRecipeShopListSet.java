@@ -7,7 +7,7 @@ package l2.gameserver.network.l2.c2s;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.items.ManufactureItem;

@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import l2.commons.dbutils.DbUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.database.DatabaseFactory;
 import l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import l2.gameserver.model.Player;

@@ -6,7 +6,7 @@
 package l2.gameserver.network.telnet;
 
 import java.nio.charset.Charset;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import org.jboss.netty.channel.ChannelHandler;
 import org.jboss.netty.channel.ChannelPipeline;
 import org.jboss.netty.channel.ChannelPipelineFactory;

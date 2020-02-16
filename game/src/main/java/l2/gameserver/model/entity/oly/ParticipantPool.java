@@ -5,7 +5,7 @@
 
 package l2.gameserver.model.entity.oly;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
 import l2.gameserver.network.l2.s2c.L2GameServerPacket;

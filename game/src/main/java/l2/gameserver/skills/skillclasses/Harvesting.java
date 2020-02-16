@@ -6,7 +6,7 @@
 package l2.gameserver.skills.skillclasses;
 
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.model.Creature;
 import l2.gameserver.model.Player;

@@ -5,7 +5,7 @@
 
 package l2.gameserver.model.base;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Creature;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;

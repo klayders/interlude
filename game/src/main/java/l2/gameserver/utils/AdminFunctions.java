@@ -6,7 +6,7 @@
 package l2.gameserver.utils;
 
 import l2.gameserver.Announcements;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.dao.CharacterDAO;
 import l2.gameserver.instancemanager.CursedWeaponsManager;
 import l2.gameserver.model.Player;

@@ -7,7 +7,7 @@ package l2.gameserver.handler.voicecommands.impl;
 
 import java.util.Iterator;
 import java.util.List;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.htm.HtmCache;
 import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.handler.voicecommands.IVoicedCommandHandler;

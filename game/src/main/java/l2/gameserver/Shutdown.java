@@ -5,10 +5,8 @@
 
 package l2.gameserver;
 
-import l2.commons.net.nio.impl.SelectorThread;
 import l2.commons.time.cron.SchedulingPattern;
 import l2.commons.time.cron.SchedulingPattern.InvalidPatternException;
-import l2.gameserver.config.Config;
 import l2.gameserver.config.GameServerConfiguration;
 import l2.gameserver.data.xml.holder.ResidenceHolder;
 import l2.gameserver.database.DatabaseFactory;

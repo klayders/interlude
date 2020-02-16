@@ -3,7 +3,7 @@
 // (powered by Fernflower decompiler)
 //
 
-package l2.gameserver.config;
+package l2.gameserver;
 
 import gnu.trove.TIntHashSet;
 import gnu.trove.TIntIntHashMap;

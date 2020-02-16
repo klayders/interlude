@@ -6,7 +6,7 @@
 package l2.gameserver.handler.admincommands.impl;
 
 import l2.commons.lang.StatsUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.GameTimeController;
 import l2.gameserver.Shutdown;
 import l2.gameserver.handler.admincommands.IAdminCommandHandler;

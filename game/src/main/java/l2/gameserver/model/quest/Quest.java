@@ -11,7 +11,7 @@ import l2.commons.dbutils.DbUtils;
 import l2.commons.logging.LogUtils;
 import l2.commons.threading.RunnableImpl;
 import l2.commons.util.TroveUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.data.xml.holder.ItemHolder;
 import l2.gameserver.data.xml.holder.NpcHolder;

@@ -6,7 +6,7 @@
 package l2.gameserver.network.l2.s2c;
 
 import l2.commons.dbutils.DbUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.dao.CharacterDAO;
 import l2.gameserver.database.DatabaseFactory;
 import l2.gameserver.model.CharSelectInfoPackage;

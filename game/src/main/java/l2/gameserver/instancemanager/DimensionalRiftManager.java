@@ -7,7 +7,7 @@ package l2.gameserver.instancemanager;
 
 import l2.commons.geometry.Rectangle;
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.NpcHolder;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.SimpleSpawner;

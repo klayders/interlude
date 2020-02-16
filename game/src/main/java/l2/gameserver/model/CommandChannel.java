@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import l2.commons.collections.JoinedIterator;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.model.entity.Reflection;
 import l2.gameserver.model.instances.NpcFriendInstance;

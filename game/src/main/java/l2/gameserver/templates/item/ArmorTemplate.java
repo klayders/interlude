@@ -5,7 +5,7 @@
 
 package l2.gameserver.templates.item;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.templates.StatsSet;
 import l2.gameserver.templates.item.WeaponTemplate.WeaponType;
 

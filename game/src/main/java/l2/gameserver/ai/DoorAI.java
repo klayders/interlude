@@ -5,7 +5,6 @@
 
 package l2.gameserver.ai;
 
-import java.util.Iterator;
 import l2.commons.util.Rnd;
 import l2.gameserver.model.Creature;
 import l2.gameserver.model.Player;
@@ -14,6 +13,7 @@ import l2.gameserver.model.instances.DoorInstance;
 import l2.gameserver.model.instances.NpcInstance;
 
 public class DoorAI extends CharacterAI {
+
   public DoorAI(DoorInstance actor) {
     super(actor);
   }
@@ -28,7 +28,7 @@ public class DoorAI extends CharacterAI {
   }
 
   public DoorInstance getActor() {
-    return (DoorInstance)super.getActor();
+    return (DoorInstance) super.getActor();
   }
 
   protected void onEvtAttacked(Creature attacker, int damage) {
@@ -36,8 +36,8 @@ public class DoorAI extends CharacterAI {
     if (attacker != null && (actor = this.getActor()) != null) {
       Player player = attacker.getPlayer();
       if (player != null) {
-        SiegeEvent<?, ?> siegeEvent1 = (SiegeEvent)player.getEvent(SiegeEvent.class);
-        SiegeEvent<?, ?> siegeEvent2 = (SiegeEvent)actor.getEvent(SiegeEvent.class);
+        SiegeEvent<?, ?> siegeEvent1 = (SiegeEvent) player.getEvent(SiegeEvent.class);
+        SiegeEvent<?, ?> siegeEvent2 = (SiegeEvent) actor.getEvent(SiegeEvent.class);
         if (siegeEvent1 == null || siegeEvent1 == siegeEvent2 && siegeEvent1.getSiegeClan("attackers", player.getClan()) != null) {
 
           for (NpcInstance npc : actor.getAroundNpc(900, 200)) {

@@ -5,7 +5,7 @@
 
 package l2.gameserver.instancemanager;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.dao.CharacterDAO;
 import l2.gameserver.handler.petition.IPetitionHandler;
 import l2.gameserver.model.Player;

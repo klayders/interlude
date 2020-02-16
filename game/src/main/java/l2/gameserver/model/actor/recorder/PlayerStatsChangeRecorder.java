@@ -5,7 +5,7 @@
 
 package l2.gameserver.model.actor.recorder;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.base.Element;
 import l2.gameserver.model.matching.MatchingRoom;

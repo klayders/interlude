@@ -31,18 +31,16 @@ public abstract class AbstractDirParser<H extends AbstractHolder> extends Abstra
 
                 try {
                     Collection<File> files = FileUtils.listFiles(dir, FileFilterUtils.suffixFileFilter(".xml"), FileFilterUtils.directoryFileFilter());
-                    Iterator var4 = files.iterator();
 
-                    while(var4.hasNext()) {
-                        File f = (File)var4.next();
-                        if (!f.isHidden() && !this.isIgnored(f)) {
-                            try {
-                                this.parseDocument(new FileInputStream(f), f.getName());
-                            } catch (Exception var7) {
-                                this.info("Exception: " + var7 + " in file: " + f.getName(), var7);
-                            }
-                        }
+                  for (File f : files) {
+                    if (!f.isHidden() && !this.isIgnored(f)) {
+                      try {
+                        this.parseDocument(new FileInputStream(f), f.getName());
+                      } catch (Exception var7) {
+                        this.info("Exception: " + var7 + " in file: " + f.getName(), var7);
+                      }
                     }
+                  }
                 } catch (Exception var8) {
                     this.warn("Exception: " + var8, var8);
                 }

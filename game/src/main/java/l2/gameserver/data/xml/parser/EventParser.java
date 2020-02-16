@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 import l2.commons.collections.MultiValueSet;
 import l2.commons.data.xml.AbstractDirParser;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.EventHolder;
 import l2.gameserver.model.entity.events.EventAction;
 import l2.gameserver.model.entity.events.EventType;

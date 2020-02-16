@@ -5,7 +5,7 @@
 
 package l2.gameserver.handler.bbs;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.templates.StatsSet;
 import lombok.extern.slf4j.Slf4j;
 

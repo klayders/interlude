@@ -6,7 +6,7 @@
 package l2.gameserver.network.l2;
 
 import l2.commons.dbutils.DbUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.data.StringHolder;
 import l2.gameserver.database.DatabaseFactory;

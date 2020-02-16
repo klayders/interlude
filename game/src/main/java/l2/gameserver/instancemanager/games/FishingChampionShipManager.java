@@ -8,7 +8,7 @@ package l2.gameserver.instancemanager.games;
 import l2.commons.dbutils.DbUtils;
 import l2.commons.threading.RunnableImpl;
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.data.xml.holder.ItemHolder;
 import l2.gameserver.database.DatabaseFactory;

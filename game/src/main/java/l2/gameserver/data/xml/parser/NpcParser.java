@@ -6,7 +6,7 @@
 package l2.gameserver.data.xml.parser;
 
 import l2.commons.data.xml.AbstractDirParser;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.ItemHolder;
 import l2.gameserver.data.xml.holder.NpcHolder;
 import l2.gameserver.model.Skill;
@@ -58,7 +58,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder> {
     return "npc.dtd";
   }
 
-  protected void readData(Element rootElement) throws Exception {
+  protected void readData(Element rootElement) {
     NpcTemplate template;
     label302:
     for (Iterator npcIterator = rootElement.elementIterator(); npcIterator.hasNext(); this.getHolder().addTemplate(template)) {

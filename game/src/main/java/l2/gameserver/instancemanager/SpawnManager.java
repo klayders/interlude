@@ -5,7 +5,7 @@
 
 package l2.gameserver.instancemanager;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.GameTimeController;
 import l2.gameserver.data.xml.holder.NpcHolder;
 import l2.gameserver.data.xml.holder.SpawnHolder;

@@ -8,7 +8,7 @@ package l2.gameserver.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.items.Inventory;
 import l2.gameserver.model.items.ItemInstance;
 import l2.gameserver.tables.SkillTable;

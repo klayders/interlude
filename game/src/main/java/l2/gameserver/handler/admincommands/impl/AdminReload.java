@@ -7,7 +7,7 @@ package l2.gameserver.handler.admincommands.impl;
 
 import java.util.Iterator;
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.data.StringHolder;
 import l2.gameserver.data.htm.HtmCache;

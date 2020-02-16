@@ -13,7 +13,7 @@ import l2.commons.lang.reference.HardReferences;
 import l2.commons.threading.RunnableImpl;
 import l2.commons.util.Rnd;
 import l2.gameserver.Announcements;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.GameTimeController;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.ai.CtrlEvent;

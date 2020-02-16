@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
 import l2.commons.data.xml.AbstractFileParser;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.VariationGroupHolder;
 import l2.gameserver.templates.item.support.VariationGroupData;
 import org.dom4j.Element;

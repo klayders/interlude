@@ -9,7 +9,7 @@ import com.sun.management.HotSpotDiagnosticMXBean;
 import l2.commons.lang.StatsUtils;
 import l2.commons.net.nio.impl.SelectorThread;
 import l2.commons.threading.RunnableStatsManager;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.geodata.PathFindBuffers;
 import l2.gameserver.network.telnet.TelnetCommand;

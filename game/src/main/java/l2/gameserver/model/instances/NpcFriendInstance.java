@@ -6,7 +6,7 @@
 package l2.gameserver.model.instances;
 
 import java.util.StringTokenizer;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ai.CtrlIntention;
 import l2.gameserver.model.Player;
 import l2.gameserver.network.l2.components.IStaticPacket;

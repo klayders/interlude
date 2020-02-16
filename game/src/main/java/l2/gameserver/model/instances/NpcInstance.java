@@ -8,7 +8,7 @@ package l2.gameserver.model.instances;
 import gnu.trove.TIntObjectIterator;
 import l2.commons.collections.MultiValueSet;
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.ai.CharacterAI;
 import l2.gameserver.ai.CtrlEvent;

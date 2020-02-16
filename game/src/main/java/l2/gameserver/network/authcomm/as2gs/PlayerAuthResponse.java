@@ -5,7 +5,7 @@
 
 package l2.gameserver.network.authcomm.as2gs;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.model.Player;
 import l2.gameserver.network.authcomm.AuthServerCommunication;

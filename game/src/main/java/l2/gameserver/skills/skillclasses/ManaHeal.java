@@ -5,7 +5,7 @@
 
 package l2.gameserver.skills.skillclasses;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Creature;
 import l2.gameserver.model.Skill;
 import l2.gameserver.network.l2.s2c.SystemMessage;

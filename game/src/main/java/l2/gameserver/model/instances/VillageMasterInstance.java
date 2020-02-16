@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.data.xml.holder.ResidenceHolder;
 import l2.gameserver.model.Player;

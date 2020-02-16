@@ -8,7 +8,7 @@ package l2.gameserver.handler.voicecommands;
 import java.util.HashMap;
 import java.util.Map;
 import l2.commons.data.xml.AbstractHolder;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.handler.voicecommands.impl.Augments;
 import l2.gameserver.handler.voicecommands.impl.Banking;
 import l2.gameserver.handler.voicecommands.impl.CWHPrivileges;

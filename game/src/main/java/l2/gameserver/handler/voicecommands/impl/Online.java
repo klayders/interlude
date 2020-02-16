@@ -5,7 +5,7 @@
 
 package l2.gameserver.handler.voicecommands.impl;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;

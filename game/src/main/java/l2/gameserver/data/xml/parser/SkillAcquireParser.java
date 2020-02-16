@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import l2.commons.data.xml.AbstractDirParser;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.SkillAcquireHolder;
 import l2.gameserver.model.SkillLearn;
 import l2.gameserver.model.base.ClassType2;

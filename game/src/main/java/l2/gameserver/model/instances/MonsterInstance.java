@@ -19,7 +19,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import l2.commons.threading.RunnableImpl;
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.instancemanager.CursedWeaponsManager;

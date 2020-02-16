@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.CRC32;
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -8,7 +8,7 @@ package l2.gameserver.taskmanager;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.model.items.ItemInstance;
 import l2.gameserver.model.items.ItemInstance.ItemLocation;

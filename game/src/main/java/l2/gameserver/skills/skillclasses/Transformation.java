@@ -7,7 +7,7 @@ package l2.gameserver.skills.skillclasses;
 
 import java.util.Iterator;
 import java.util.List;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.instancemanager.ReflectionManager;
 import l2.gameserver.model.Creature;

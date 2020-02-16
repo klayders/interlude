@@ -5,7 +5,7 @@
 
 package l2.gameserver.network.l2;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.network.l2.c2s.L2GameClientPacket;
 
 public abstract class CGMHelper {

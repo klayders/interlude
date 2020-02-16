@@ -6,7 +6,7 @@
 package l2.gameserver.taskmanager.tasks;
 
 import java.util.Iterator;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
 import l2.gameserver.taskmanager.Task;

@@ -8,7 +8,7 @@ package l2.gameserver.ai;
 import l2.commons.lang.reference.HardReference;
 import l2.commons.lang.reference.HardReferences;
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.model.*;
 import l2.gameserver.network.l2.GameClient;

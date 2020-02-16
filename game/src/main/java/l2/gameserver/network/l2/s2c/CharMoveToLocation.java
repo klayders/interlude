@@ -5,7 +5,7 @@
 
 package l2.gameserver.network.l2.s2c;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Creature;
 import l2.gameserver.utils.Location;
 import l2.gameserver.utils.Log;

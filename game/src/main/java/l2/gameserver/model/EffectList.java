@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.network.l2.s2c.SystemMessage;
 import l2.gameserver.skills.EffectType;
 import l2.gameserver.skills.effects.EffectTemplate;

@@ -7,7 +7,7 @@ package l2.gameserver.utils;
 
 import l2.commons.geometry.Polygon;
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.geodata.GeoEngine;
 import l2.gameserver.model.World;
 import l2.gameserver.templates.spawn.SpawnRange;

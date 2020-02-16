@@ -7,7 +7,7 @@ package l2.gameserver.taskmanager.tasks;
 
 import l2.commons.dbutils.DbUtils;
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.database.DatabaseFactory;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.World;

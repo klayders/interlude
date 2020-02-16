@@ -8,7 +8,7 @@ package l2.gameserver.data.xml.parser;
 import l2.commons.data.xml.AbstractDirParser;
 import l2.commons.geometry.Polygon;
 import l2.commons.time.cron.SchedulingPattern;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.DoorHolder;
 import l2.gameserver.data.xml.holder.InstantZoneHolder;
 import l2.gameserver.data.xml.holder.SpawnHolder;

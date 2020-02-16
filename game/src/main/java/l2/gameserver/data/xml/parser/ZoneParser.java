@@ -13,7 +13,7 @@ import l2.commons.geometry.Circle;
 import l2.commons.geometry.Polygon;
 import l2.commons.geometry.Rectangle;
 import l2.commons.geometry.Shape;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.ZoneHolder;
 import l2.gameserver.model.Territory;
 import l2.gameserver.model.World;

@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.Map.Entry;
 import l2.commons.data.xml.AbstractHolder;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Player;
 import l2.gameserver.utils.Language;
 
@@ -56,17 +56,15 @@ public final class StringHolder extends AbstractHolder {
   }
 
   private String get(Language lang, String address) {
-    Map<String, String> strings = (Map)this._strings.get(lang);
-    return (String)strings.get(address);
+    Map<String, String> strings = this._strings.get(lang);
+    return strings.get(address);
   }
 
   public void load() {
     Language[] var1 = Language.VALUES;
-    int var2 = var1.length;
 
     label134:
-    for(int var3 = 0; var3 < var2; ++var3) {
-      Language lang = var1[var3];
+    for (Language lang : var1) {
       this._strings.put(lang, new HashMap<>());
       File f = new File(Config.DATAPACK_ROOT, "data/string/strings_" + lang.getShortName() + ".properties");
       if (!f.exists()) {
@@ -78,13 +76,13 @@ public final class StringHolder extends AbstractHolder {
           reader = new LineNumberReader(new FileReader(f));
           String line = null;
 
-          while(true) {
-            while(true) {
+          while (true) {
+            while (true) {
               do {
                 if ((line = reader.readLine()) == null) {
                   continue label134;
                 }
-              } while(line.startsWith("#"));
+              } while (line.startsWith("#"));
 
               StringTokenizer token = new StringTokenizer(line, "=");
               if (token.countTokens() < 2) {
@@ -93,10 +91,10 @@ public final class StringHolder extends AbstractHolder {
                 String name = token.nextToken();
 
                 String value;
-                for(value = token.nextToken(); token.hasMoreTokens(); value = value + "=" + token.nextToken()) {
+                for (value = token.nextToken(); token.hasMoreTokens(); value = value + "=" + token.nextToken()) {
                 }
 
-                Map<String, String> strings = (Map)this._strings.get(lang);
+                Map<String, String> strings = this._strings.get(lang);
                 strings.put(name, value);
               }
             }
@@ -126,7 +124,7 @@ public final class StringHolder extends AbstractHolder {
 
     while(var1.hasNext()) {
       Entry<Language, Map<String, String>> entry = (Entry)var1.next();
-      this.info("load strings: " + ((Map)entry.getValue()).size() + " for lang: " + entry.getKey());
+      this.info("load strings: " + entry.getValue().size() + " for lang: " + entry.getKey());
     }
 
   }

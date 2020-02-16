@@ -8,7 +8,7 @@ package l2.gameserver.database;
 
 import com.mysql.cj.jdbc.MysqlConnectionPoolDataSource;
 import l2.commons.db.BaseDataConnectionFactory;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 
 import javax.sql.ConnectionPoolDataSource;
 import java.sql.Connection;

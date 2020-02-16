@@ -11,7 +11,7 @@ import l2.commons.lang.ArrayUtils;
 import l2.commons.threading.RunnableImpl;
 import l2.commons.time.cron.NextTime;
 import l2.commons.time.cron.SchedulingPattern;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.dao.CastleDamageZoneDAO;
 import l2.gameserver.dao.CastleDoorUpgradeDAO;

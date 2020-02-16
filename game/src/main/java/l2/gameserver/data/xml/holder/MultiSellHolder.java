@@ -6,7 +6,7 @@
 package l2.gameserver.data.xml.holder;
 
 import gnu.trove.TIntObjectHashMap;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.base.MultiSellEntry;
 import l2.gameserver.model.base.MultiSellIngredient;

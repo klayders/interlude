@@ -13,7 +13,7 @@ import l2.commons.listener.Listener;
 import l2.commons.threading.RunnableImpl;
 import l2.commons.util.Rnd;
 import l2.commons.util.concurrent.atomic.AtomicState;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.ai.CharacterAI;
 import l2.gameserver.ai.CtrlEvent;

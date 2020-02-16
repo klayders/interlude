@@ -7,7 +7,7 @@ package l2.gameserver.handler.admincommands.impl;
 
 import l2.commons.dbutils.DbUtils;
 import l2.gameserver.Announcements;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.database.DatabaseFactory;
 import l2.gameserver.database.MysqlInitializer;
 import l2.gameserver.handler.admincommands.IAdminCommandHandler;

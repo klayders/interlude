@@ -7,7 +7,7 @@ package l2.gameserver.model;
 
 import l2.commons.lang.reference.HardReference;
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.network.l2.s2c.SystemMessage;
 import l2.gameserver.tables.SkillTable;

@@ -6,7 +6,7 @@
 package l2.gameserver.model.entity.residence;
 
 import l2.commons.dbutils.DbUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.dao.ClanDataDAO;
 import l2.gameserver.dao.ClanHallDAO;
 import l2.gameserver.database.DatabaseFactory;

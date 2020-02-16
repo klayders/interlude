@@ -13,7 +13,7 @@ import l2.commons.time.cron.AddPattern;
 import l2.commons.time.cron.NextTime;
 import l2.commons.time.cron.SchedulingPattern;
 import l2.commons.time.cron.SchedulingPattern.InvalidPatternException;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.SpawnHolder;
 import l2.gameserver.model.Territory;
 import l2.gameserver.templates.StatsSet;

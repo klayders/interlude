@@ -6,7 +6,7 @@
 package l2.gameserver.model.instances;
 
 import l2.gameserver.Announcements;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.instancemanager.CoupleManager;
 import l2.gameserver.model.GameObjectsStorage;

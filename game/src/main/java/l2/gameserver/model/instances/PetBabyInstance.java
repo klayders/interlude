@@ -7,7 +7,7 @@ package l2.gameserver.model.instances;
 
 import l2.commons.threading.RunnableImpl;
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.model.*;
 import l2.gameserver.model.items.ItemInstance;

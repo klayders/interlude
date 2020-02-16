@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.Map;
 import l2.commons.collections.MultiValueSet;
 import l2.commons.data.xml.AbstractFileParser;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.FishDataHolder;
 import l2.gameserver.templates.item.support.FishGroup;
 import l2.gameserver.templates.item.support.FishTemplate;

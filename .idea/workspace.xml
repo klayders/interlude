@@ -1,13 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1aeeaf08-8e60-4d7e-a35b-0eada0df16ed" name="Default Changelist" comment="change props">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1aeeaf08-8e60-4d7e-a35b-0eada0df16ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/game/chatfilters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/resources/game/chatfilters.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/game/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/resources/game/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/src/main/resources/game/services_rate_bonus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/resources/game/services_rate_bonus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/l2/commons/data/xml/AbstractDirParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/l2/commons/data/xml/AbstractDirParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/l2/commons/threading/RunnableImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/l2/commons/threading/RunnableImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/Announcements.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/Announcements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/Shutdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/Shutdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ThreadPoolManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ThreadPoolManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/AbstractAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/AbstractAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/CharacterAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/CharacterAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/DefaultAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/DefaultAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/DoorAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/DoorAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/PlayableAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/PlayableAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/PlayerAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/PlayerAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/SummonAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/ai/SummonAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/config/GameServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/config/GameServerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/StringHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/StringHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/htm/HtmCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/htm/HtmCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/holder/BuyListHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/holder/BuyListHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/holder/MultiSellHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/holder/MultiSellHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/ArmorSetsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/ArmorSetsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/CapsuleItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/CapsuleItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/CubicParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/CubicParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/DomainParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/DomainParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/DoorParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/DoorParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/EnchantItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/EnchantItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/EnchantSkillParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/EnchantSkillParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/EventParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/EventParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/FishDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/FishDataParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/HennaParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/HennaParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/InstantZoneParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/InstantZoneParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/ItemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/ItemParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/NpcParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/NpcParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/OptionDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/OptionDataParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/RecipeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/RecipeParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/ResidenceParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/ResidenceParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/RestartPointParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/RestartPointParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/SkillAcquireParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/SkillAcquireParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/SoulCrystalParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/SoulCrystalParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/SpawnParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/SpawnParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/StaticObjectParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/StaticObjectParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/VariationChanceParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/VariationChanceParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/VariationGroupParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/VariationGroupParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/ZoneParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/data/xml/parser/ZoneParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/database/DatabaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/database/DatabaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/GeoEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/GeoEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/GeoMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/GeoMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/GeoOptimizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/GeoOptimizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/PathFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/PathFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/PathFindBuffers.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/geodata/PathFindBuffers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminBan.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminBan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminChangeAccessLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminChangeAccessLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminEditChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminEditChar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminEffects.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminEffects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminGeodata.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminGeodata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminOlympiad.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminOlympiad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminPledge.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminPledge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminReload.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminReload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminShutdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/admincommands/impl/AdminShutdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/bbs/CommunityBoardManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/bbs/CommunityBoardManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/usercommands/impl/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/usercommands/impl/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/VoicedCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/VoicedCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Banking.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Banking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/CWHPrivileges.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/CWHPrivileges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Cfg.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Cfg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Debug.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Debug.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Offline.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Offline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Online.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Online.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Relocate.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Relocate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Relog.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Relog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Wedding.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/Wedding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/WhoAmI.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/handler/voicecommands/impl/WhoAmI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/AutoAnnounce.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/AutoAnnounce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/CastleManorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/CastleManorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/CursedWeaponsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/CursedWeaponsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/DimensionalRiftManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/DimensionalRiftManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/PetitionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/PetitionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/RaidBossSpawnManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/RaidBossSpawnManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/ReflectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/ReflectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/SpawnManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/SpawnManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/games/FishingChampionShipManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/games/FishingChampionShipManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/games/LotteryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/games/LotteryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/ArmorSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/ArmorSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/CommandChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/CommandChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Creature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/DeathPenalty.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/DeathPenalty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Effect.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Effect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/EffectList.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/EffectList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/GameObjectTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/GameObjectTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/GameObjectsStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/GameObjectsStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Manor.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Manor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Playable.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Playable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/SkillLearn.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/SkillLearn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Spawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Spawner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/SubClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/SubClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Summon.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/Summon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/actor/recorder/PlayerStatsChangeRecorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/actor/recorder/PlayerStatsChangeRecorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/base/BaseStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/base/BaseStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/base/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/base/Experience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/base/PlayerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/base/PlayerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/DimensionalRift.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/DimensionalRift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/SevenSigns.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/SevenSigns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/actions/NpcSayAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/actions/NpcSayAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/impl/BoatWayEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/impl/BoatWayEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/impl/CastleSiegeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/impl/CastleSiegeEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/impl/ClanHallAuctionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/impl/ClanHallAuctionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/impl/SiegeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/impl/SiegeEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/objects/SpawnExObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/events/objects/SpawnExObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/Competition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/CompetitionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/CompetitionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/HeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/HeroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/NoblesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/NoblesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/OlyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/OlyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/ParticipantPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/oly/ParticipantPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/residence/ClanHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/entity/residence/ClanHall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/DoorInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/DoorInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/FestivalGuideInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/FestivalGuideInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/FishermanInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/FishermanInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/LotteryManagerInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/LotteryManagerInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/MerchantInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/MerchantInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/MonsterInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/MonsterInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/NpcFriendInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/NpcFriendInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/NpcInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/NpcInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/OlympiadManagerInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/OlympiadManagerInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/PetBabyInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/PetBabyInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/PetInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/PetInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/RaidBossInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/RaidBossInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/SignsPriestInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/SignsPriestInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/SpecialMonsterInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/SpecialMonsterInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/VillageMasterInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/VillageMasterInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/WeddingManagerInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/instances/WeddingManagerInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/items/ItemInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/items/ItemInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/pledge/Clan.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/pledge/Clan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/quest/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/quest/Quest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/quest/QuestState.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/quest/QuestState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/reward/RewardData.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/reward/RewardData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/reward/RewardGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/model/reward/RewardGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/authcomm/AuthServerCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/authcomm/AuthServerCommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/authcomm/as2gs/PlayerAuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/authcomm/as2gs/PlayerAuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/authcomm/gs2as/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/authcomm/gs2as/AuthRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/CGMHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/CGMHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/GameClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/GameClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/GamePacketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/GamePacketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/SecondPasswordAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/SecondPasswordAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/AddTradeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/AddTradeItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/AttackRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/AttackRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/CharacterCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/CharacterCreate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/CharacterDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/CharacterDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/CharacterSelected.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/CharacterSelected.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/EnterWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/EnterWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/MoveBackwardToLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/MoveBackwardToLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/ProtocolVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/ProtocolVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestActionUse.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestActionUse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestAnswerJoinParty.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestAnswerJoinParty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestAquireSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestAquireSkill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestAquireSkillInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestAquireSkillInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestBBSwrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestBBSwrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestBuyItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestBuyItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestBuySeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestBuySeed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestBypassToServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestBypassToServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestDestroyItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestDestroyItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestDropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestDropItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestDuelStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestDuelStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestEnchantItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestEnchantItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestEx2ndPasswordCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestEx2ndPasswordCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestExAddPostFriendForPostBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestExAddPostFriendForPostBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestExFishRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestExFishRanking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestExPostItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestExPostItemList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestExSendPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestExSendPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestGiveNickName.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestGiveNickName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestJoinAlly.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestJoinAlly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestJoinParty.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestJoinParty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestMultiSellChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestMultiSellChoose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestOlympiadObserverEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestOlympiadObserverEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestOustPledgeMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestOustPledgeMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPackageSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPackageSend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPetUseItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPetUseItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPetitionCancel.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPetitionCancel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPreviewItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPreviewItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPrivateStoreBuySellList.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestPrivateStoreBuySellList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestProcureCrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestProcureCrop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestProcureCropList.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestProcureCropList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestRecipeItemMakeSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestRecipeItemMakeSelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestRecipeShopListSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestRecipeShopListSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestReload.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestReload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestSellItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestSellItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestSendL2FriendSay.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestSendL2FriendSay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestShowBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestShowBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestStartPledgeWar.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/RequestStartPledgeWar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/Say2C.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/Say2C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/SendWareHouseDepositList.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/SendWareHouseDepositList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/SendWareHouseWithDrawList.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/SendWareHouseWithDrawList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/UseItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/c2s/UseItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/CharInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/CharInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/CharMoveToLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/CharMoveToLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/CharacterSelectionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/CharacterSelectionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/DropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/DropItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/ExStorageMaxCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/ExStorageMaxCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/MultiSellList.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/MultiSellList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/NpcInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/NpcInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/PrivateStoreListBuy.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/PrivateStoreListBuy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/SellRefundList.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/SellRefundList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/SendStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/SendStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/SpawnItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/SpawnItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/TeleportToLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/TeleportToLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/l2/s2c/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/TelnetPipelineFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/TelnetPipelineFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/TelnetServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/TelnetServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/TelnetServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/TelnetServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/commands/TelnetConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/commands/TelnetConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/commands/TelnetPerfomance.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/commands/TelnetPerfomance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/commands/TelnetStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/network/telnet/commands/TelnetStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/scripts/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/scripts/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/scripts/Scripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/scripts/Scripts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/SkillsEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/SkillsEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/effects/EffectCubic.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/effects/EffectCubic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/effects/EffectDispelEffects.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/effects/EffectDispelEffects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Continuous.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Continuous.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/DeathPenalty.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/DeathPenalty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Harvesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Harvesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Heal.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Heal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/ManaDam.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/ManaDam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/ManaHeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/ManaHeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Sowing.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Sowing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Spoil.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Spoil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/StealBuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/StealBuff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Transformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/skills/skillclasses/Transformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/stats/Formulas.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/stats/Formulas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/stats/StatFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/stats/StatFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/stats/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/stats/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/stats/funcs/FuncEnchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/stats/funcs/FuncEnchant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/tables/CharTemplateTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/tables/CharTemplateTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/tables/ClanTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/tables/ClanTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/tables/GmListTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/tables/GmListTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/tables/SkillTreeTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/tables/SkillTreeTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/AiTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/AiTaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/AutoSaveManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/AutoSaveManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/EffectTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/EffectTaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/ItemsAutoDestroy.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/ItemsAutoDestroy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/L2TopRuManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/L2TopRuManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/LazyPrecisionTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/LazyPrecisionTaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/tasks/RecommendationUpdateTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/tasks/RecommendationUpdateTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/tasks/RestoreOfflineTraders.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/taskmanager/tasks/RestoreOfflineTraders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/templates/item/ArmorTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/templates/item/ArmorTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/templates/item/ItemTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/templates/item/ItemTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/AdminFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/AdminFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/ItemFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/ItemFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/MapUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/MapUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/SpawnMesh.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/SpawnMesh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/Strings.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/Strings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/TradeHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/TradeHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/WarehouseFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/main/java/l2/gameserver/utils/WarehouseFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +410,7 @@
       <module name="interlude" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="l2.gameserver.config.*" />
+          <option name="PATTERN" value="l2.gameserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -304,7 +557,7 @@
       <workItem from="1581787493035" duration="974000" />
       <workItem from="1581788804062" duration="773000" />
       <workItem from="1581803644917" duration="10167000" />
-      <workItem from="1581864581058" duration="1624000" />
+      <workItem from="1581864581058" duration="5365000" />
     </task>
     <task id="LOCAL-00001" summary="add 2 libs">
       <created>1570847277013</created>
@@ -460,7 +713,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581818779698</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix resource configuration">
+      <created>1581866342094</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1581866342094</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix Scripts">
+      <created>1581866982663</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1581866982663</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +780,9 @@
     <MESSAGE value="change db host" />
     <MESSAGE value="change log level" />
     <MESSAGE value="change props" />
-    <option name="LAST_COMMIT_MESSAGE" value="change props" />
+    <MESSAGE value="fix resource configuration" />
+    <MESSAGE value="fix Scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Scripts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="257" y="58" width="800" height="677" key="#Plugins" timestamp="1581787453140">
@@ -538,14 +807,14 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="557" y="288" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/67.27.1299.741@67.27.1299.741" timestamp="1581456709027" />
-    <state x="509" y="186" width="493" height="582" key="#xdebugger.evaluate" timestamp="1581865664049">
+    <state x="672" y="164" width="493" height="582" key="#xdebugger.evaluate" timestamp="1581868458315">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="509" y="186" width="493" height="582" key="#xdebugger.evaluate/0.27.1366.741@0.27.1366.741" timestamp="1581865664049" />
-    <state x="225" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581866060877">
+    <state x="672" y="164" width="493" height="582" key="#xdebugger.evaluate/0.27.1366.741@0.27.1366.741" timestamp="1581868458315" />
+    <state x="225" y="27" width="860" height="741" key="CommitChangelistDialog2" timestamp="1581866982431">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="225" y="27" width="860" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1581866060877" />
+    <state x="225" y="27" width="860" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1581866982431" />
     <state x="281" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1581460495368" />
     <state x="100" y="125" width="1166" height="543" key="DiffContextDialog" timestamp="1581865961012">
       <screen x="0" y="27" width="1366" height="741" />
@@ -561,62 +830,62 @@
     </state>
     <state x="449" y="155" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1581550927960" />
     <state x="494" y="155" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1581457492593" />
-    <state width="1320" height="331" key="GridCell.Tab.0.bottom" timestamp="1581865740029">
+    <state width="1320" height="302" key="GridCell.Tab.0.bottom" timestamp="1581870091132">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581865740029" />
+    <state width="1320" height="302" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581870091132" />
     <state width="1253" height="325" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581463412959" />
-    <state width="1320" height="331" key="GridCell.Tab.0.center" timestamp="1581865740028">
+    <state width="1320" height="302" key="GridCell.Tab.0.center" timestamp="1581870091130">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1581865740028" />
+    <state width="1320" height="302" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1581870091130" />
     <state width="1253" height="325" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581463412958" />
-    <state width="1320" height="331" key="GridCell.Tab.0.left" timestamp="1581865740027">
+    <state width="1320" height="302" key="GridCell.Tab.0.left" timestamp="1581870091129">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1581865740027" />
+    <state width="1320" height="302" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1581870091129" />
     <state width="1253" height="325" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581463412957" />
-    <state width="1320" height="331" key="GridCell.Tab.0.right" timestamp="1581865740029">
+    <state width="1320" height="302" key="GridCell.Tab.0.right" timestamp="1581870091131">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1581865740029" />
+    <state width="1320" height="302" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1581870091131" />
     <state width="1253" height="325" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581463412959" />
-    <state width="1320" height="331" key="GridCell.Tab.1.bottom" timestamp="1581865740030">
+    <state width="1320" height="302" key="GridCell.Tab.1.bottom" timestamp="1581870091134">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581865740030" />
+    <state width="1320" height="302" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581870091134" />
     <state width="1253" height="371" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581463313777" />
-    <state width="1320" height="331" key="GridCell.Tab.1.center" timestamp="1581865740029">
+    <state width="1320" height="302" key="GridCell.Tab.1.center" timestamp="1581870091133">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1581865740029" />
+    <state width="1320" height="302" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1581870091133" />
     <state width="1253" height="371" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
-    <state width="1320" height="331" key="GridCell.Tab.1.left" timestamp="1581865740029">
+    <state width="1320" height="302" key="GridCell.Tab.1.left" timestamp="1581870091133">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1581865740029" />
+    <state width="1320" height="302" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1581870091133" />
     <state width="1253" height="371" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
-    <state width="1320" height="331" key="GridCell.Tab.1.right" timestamp="1581865740029">
+    <state width="1320" height="302" key="GridCell.Tab.1.right" timestamp="1581870091133">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1581865740029" />
+    <state width="1320" height="302" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1581870091133" />
     <state width="1253" height="371" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1581463313776" />
-    <state width="1320" height="331" key="GridCell.Tab.2.bottom" timestamp="1581865740030">
+    <state width="1320" height="265" key="GridCell.Tab.2.bottom" timestamp="1581868883791">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.2.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581865740030" />
-    <state width="1320" height="331" key="GridCell.Tab.2.center" timestamp="1581865740030">
+    <state width="1320" height="265" key="GridCell.Tab.2.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581868883791" />
+    <state width="1320" height="265" key="GridCell.Tab.2.center" timestamp="1581868883791">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.2.center/0.27.1366.741@0.27.1366.741" timestamp="1581865740030" />
-    <state width="1320" height="331" key="GridCell.Tab.2.left" timestamp="1581865740030">
+    <state width="1320" height="265" key="GridCell.Tab.2.center/0.27.1366.741@0.27.1366.741" timestamp="1581868883791" />
+    <state width="1320" height="265" key="GridCell.Tab.2.left" timestamp="1581868883791">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.2.left/0.27.1366.741@0.27.1366.741" timestamp="1581865740030" />
-    <state width="1320" height="331" key="GridCell.Tab.2.right" timestamp="1581865740030">
+    <state width="1320" height="265" key="GridCell.Tab.2.left/0.27.1366.741@0.27.1366.741" timestamp="1581868883791" />
+    <state width="1320" height="265" key="GridCell.Tab.2.right" timestamp="1581868883791">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="331" key="GridCell.Tab.2.right/0.27.1366.741@0.27.1366.741" timestamp="1581865740030" />
+    <state width="1320" height="265" key="GridCell.Tab.2.right/0.27.1366.741@0.27.1366.741" timestamp="1581868883791" />
     <state width="277" height="500" key="HiddenNamespacesPopup" timestamp="1581543483420">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -635,10 +904,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="136" y="102" width="1084" height="589" key="VCS.ChangeListViewerDialog/0.27.1366.741@0.27.1366.741" timestamp="1581865961139" />
-    <state x="257" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1581824237446">
+    <state x="257" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1581866983857">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="257" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1581824237446" />
+    <state x="257" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1581866983857" />
     <state x="311" y="121" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1299.741@67.27.1299.741" timestamp="1581460498389" />
     <state x="321" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1581803766308">
       <screen x="0" y="27" width="1366" height="741" />
@@ -649,10 +918,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="407" y="134" width="486" height="526" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.27.1366.741@0.27.1366.741" timestamp="1581866077801" />
-    <state x="139" y="27" width="939" height="741" key="find.popup" timestamp="1581866040077">
+    <state x="287" y="27" width="939" height="741" key="find.popup" timestamp="1581870166441">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="139" y="27" width="939" height="741" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1581866040077" />
+    <state x="287" y="27" width="939" height="741" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1581870166441" />
     <state x="10" y="27" width="1356" height="741" key="new project wizard" timestamp="1581818885067">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -661,10 +930,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="175" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1581554041611" />
-    <state x="328" y="89" width="707" height="678" key="search.everywhere.popup" timestamp="1581817030236">
+    <state x="328" y="89" width="707" height="678" key="search.everywhere.popup" timestamp="1581870050210">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="328" y="89" width="707" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1581817030236" />
+    <state x="328" y="89" width="707" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1581870050210" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1581460158491" />
   </component>
   <component name="XDebuggerManager">
@@ -766,11 +1035,6 @@
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common/src/main/java/l2/commons/db/BaseDataConnectionFactory.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar:///usr/lib/jvm/java-13-oracle/lib/src.zip!/java.base/java/net/URLClassLoader.java</url>
           <line>435</line>
           <option name="timeStamp" value="93" />
@@ -781,49 +1045,14 @@
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/common/src/main/java/l2/commons/db/BaseDataConnectionFactory.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/GameServer.java</url>
           <line>89</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/config/Config.java</url>
-          <line>1694</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/config/Config.java</url>
-          <line>1695</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/config/Config.java</url>
+          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/Config.java</url>
           <line>1746</line>
           <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
-          <line>100</line>
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
-          <line>101</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
-          <line>106</line>
-          <option name="timeStamp" value="103" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
-          <line>108</line>
-          <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
@@ -831,24 +1060,44 @@
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
-          <line>183</line>
-          <option name="timeStamp" value="107" />
+          <url>jar://$PROJECT_DIR$/game/libs/scripts.jar!/services/CommandClassMaster.class</url>
+          <line>334</line>
+          <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
-          <line>185</line>
-          <option name="timeStamp" value="108" />
+          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/SpawnManager.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
-          <line>206</line>
-          <option name="timeStamp" value="109" />
+          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/SpawnManager.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/org/dom4j/io/SAXReader.class</url>
-          <line>203</line>
-          <option name="timeStamp" value="110" />
+          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/SpawnManager.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/SpawnManager.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/instancemanager/SpawnManager.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/game/src/main/java/l2/gameserver/config/GameServerConfiguration.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/game/libs/scripts.jar!/achievements/Achievements.class</url>
+          <line>266</line>
+          <option name="timeStamp" value="130" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

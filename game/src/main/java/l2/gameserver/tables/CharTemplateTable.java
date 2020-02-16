@@ -7,7 +7,7 @@ package l2.gameserver.tables;
 
 import l2.commons.data.xml.helpers.SimpleDTDEntityResolver;
 import l2.commons.dbutils.DbUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.database.DatabaseFactory;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.actor.instances.player.ShortCut;

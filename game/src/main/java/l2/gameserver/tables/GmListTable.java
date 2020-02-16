@@ -8,7 +8,7 @@ package l2.gameserver.tables;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;

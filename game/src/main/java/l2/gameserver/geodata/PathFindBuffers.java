@@ -15,7 +15,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import l2.commons.lang.ArrayUtils;
 import l2.commons.text.StrTable;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.utils.Location;
 
 public class PathFindBuffers {

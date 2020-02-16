@@ -6,7 +6,7 @@
 package l2.gameserver.network.l2.c2s;
 
 import l2.gameserver.Announcements;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.ResidenceHolder;
 import l2.gameserver.instancemanager.*;
 import l2.gameserver.listener.actor.player.OnAnswerListener;

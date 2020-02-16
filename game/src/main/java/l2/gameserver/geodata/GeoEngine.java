@@ -7,7 +7,7 @@ package l2.gameserver.geodata;
 
 import l2.commons.geometry.Shape;
 import l2.commons.util.NaturalOrderComparator;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.geodata.GeoOptimizer.BlockLink;
 import l2.gameserver.geodata.GeoOptimizer.CheckSumLoader;
 import l2.gameserver.geodata.GeoOptimizer.GeoBlocksMatchFinder;

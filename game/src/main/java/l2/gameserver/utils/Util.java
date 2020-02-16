@@ -6,7 +6,7 @@
 package l2.gameserver.utils;
 
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
 import lombok.extern.slf4j.Slf4j;

@@ -7,7 +7,7 @@ package l2.gameserver.model.pledge;
 
 import l2.commons.collections.JoinedIterator;
 import l2.commons.dbutils.DbUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.CrestCache;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.data.xml.holder.ResidenceHolder;

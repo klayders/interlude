@@ -8,7 +8,7 @@ package l2.gameserver.data.xml.parser;
 import l2.commons.data.xml.AbstractFileParser;
 import l2.commons.geometry.Polygon;
 import l2.commons.geometry.Rectangle;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.instancemanager.MapRegionManager;
 import l2.gameserver.model.Territory;
 import l2.gameserver.model.World;

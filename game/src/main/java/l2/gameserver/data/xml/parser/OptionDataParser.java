@@ -7,7 +7,7 @@ package l2.gameserver.data.xml.parser;
 
 import java.io.File;
 import java.util.Iterator;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.OptionDataHolder;
 import l2.gameserver.model.Skill;
 import l2.gameserver.stats.triggers.TriggerInfo;

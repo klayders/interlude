@@ -6,7 +6,7 @@
 package l2.gameserver.instancemanager;
 
 import l2.gameserver.Announcements;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.GWAutoAnnounce;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;

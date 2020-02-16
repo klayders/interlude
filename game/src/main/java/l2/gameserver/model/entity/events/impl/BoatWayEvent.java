@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import l2.commons.collections.MultiValueSet;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.BoatHolder;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;

@@ -7,8 +7,8 @@ package l2.gameserver.model.entity.oly;
 
 import l2.commons.dbutils.DbUtils;
 import l2.gameserver.Announcements;
-import l2.gameserver.config.Config;
-import l2.gameserver.config.Config.OlySeasonTimeCalcMode;
+import l2.gameserver.Config;
+import l2.gameserver.Config.OlySeasonTimeCalcMode;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.database.DatabaseFactory;

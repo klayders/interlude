@@ -7,7 +7,7 @@ package l2.gameserver.model.items;
 
 import l2.commons.collections.LazyArrayList;
 import l2.commons.util.concurrent.atomic.AtomicEnumBitFlag;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ai.CtrlIntention;
 import l2.gameserver.dao.ItemsDAO;
 import l2.gameserver.data.xml.holder.ItemHolder;

@@ -5,7 +5,7 @@
 
 package l2.gameserver.stats.funcs;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.items.ItemInstance;

@@ -8,7 +8,7 @@ package l2.gameserver.network.l2.s2c;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.ItemHolder;
 import l2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
 import l2.gameserver.model.base.MultiSellEntry;

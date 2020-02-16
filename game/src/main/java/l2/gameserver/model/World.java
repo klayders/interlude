@@ -6,7 +6,7 @@
 package l2.gameserver.model;
 
 import l2.commons.collections.LazyArrayList;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Zone.ZoneType;
 import l2.gameserver.model.entity.Reflection;
 import l2.gameserver.model.instances.NpcInstance;

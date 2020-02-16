@@ -5,7 +5,7 @@
 
 package l2.gameserver.network.authcomm.gs2as;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.network.authcomm.SendablePacket;
 
 public class AuthRequest extends SendablePacket {

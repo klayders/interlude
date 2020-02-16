@@ -6,7 +6,7 @@
 package l2.gameserver.data.xml.parser;
 
 import l2.commons.data.xml.AbstractDirParser;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.ResidenceHolder;
 import l2.gameserver.model.Skill;
 import l2.gameserver.model.TeleportLocation;

@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import l2.commons.math.SafeMath;
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Player;
 
 public class RewardGroup implements Cloneable {

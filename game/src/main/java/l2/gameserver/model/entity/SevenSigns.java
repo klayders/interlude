@@ -9,7 +9,7 @@ import l2.commons.dbutils.DbUtils;
 import l2.commons.listener.Listener;
 import l2.commons.listener.ListenerList;
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.GameServer;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.cache.Msg;

@@ -8,7 +8,7 @@ package l2.gameserver.data.xml.parser;
 import java.io.File;
 import java.util.Iterator;
 import l2.commons.data.xml.AbstractFileParser;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.StaticObjectHolder;
 import l2.gameserver.templates.StaticObjectTemplate;
 import l2.gameserver.templates.StatsSet;

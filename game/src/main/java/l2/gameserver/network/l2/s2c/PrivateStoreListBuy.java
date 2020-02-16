@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.items.ItemInstance;
 import l2.gameserver.model.items.TradeItem;

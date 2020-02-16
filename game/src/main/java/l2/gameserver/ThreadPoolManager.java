@@ -14,7 +14,6 @@ import l2.commons.threading.LoggingRejectedExecutionHandler;
 import l2.commons.threading.PriorityThreadFactory;
 import l2.commons.threading.RunnableImpl;
 import l2.commons.threading.RunnableStatsWrapper;
-import l2.gameserver.config.Config;
 
 public class ThreadPoolManager {
   private static final long MAX_DELAY;

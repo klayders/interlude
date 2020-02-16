@@ -5,7 +5,7 @@
 
 package l2.gameserver.utils;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.data.xml.holder.ItemHolder;
 import l2.gameserver.idfactory.IdFactory;

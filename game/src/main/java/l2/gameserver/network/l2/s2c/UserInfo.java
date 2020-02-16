@@ -6,7 +6,7 @@
 package l2.gameserver.network.l2.s2c;
 
 import java.util.Iterator;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.NpcHolder;
 import l2.gameserver.instancemanager.CursedWeaponsManager;
 import l2.gameserver.model.Creature;

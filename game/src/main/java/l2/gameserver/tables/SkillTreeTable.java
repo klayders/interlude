@@ -5,7 +5,7 @@
 
 package l2.gameserver.tables;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.SkillAcquireHolder;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.Skill;

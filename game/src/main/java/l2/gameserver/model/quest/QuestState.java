@@ -6,7 +6,7 @@
 package l2.gameserver.model.quest;
 
 import l2.commons.util.Rnd;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.htm.HtmCache;
 import l2.gameserver.data.xml.holder.ItemHolder;
 import l2.gameserver.instancemanager.SpawnManager;

@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import l2.commons.collections.MultiValueSet;
 import l2.commons.dao.JdbcEntityState;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.dao.SiegeClanDAO;
 import l2.gameserver.instancemanager.PlayerMessageStack;
 import l2.gameserver.model.Player;

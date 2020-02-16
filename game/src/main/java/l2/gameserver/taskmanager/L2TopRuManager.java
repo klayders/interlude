@@ -6,7 +6,7 @@
 package l2.gameserver.taskmanager;
 
 import l2.commons.dbutils.DbUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.database.DatabaseFactory;
 import l2.gameserver.idfactory.IdFactory;

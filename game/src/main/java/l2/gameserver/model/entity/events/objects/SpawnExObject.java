@@ -5,7 +5,7 @@
 
 package l2.gameserver.model.entity.events.objects;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.instancemanager.SpawnManager;
 import l2.gameserver.model.Spawner;
 import l2.gameserver.model.entity.events.GlobalEvent;

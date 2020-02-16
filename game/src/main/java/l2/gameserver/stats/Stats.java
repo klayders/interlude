@@ -6,7 +6,7 @@
 package l2.gameserver.stats;
 
 import java.util.NoSuchElementException;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 
 public enum Stats {
   MAX_HP("maxHp", 0.0D, 1.0D / 0.0, 1.0D),

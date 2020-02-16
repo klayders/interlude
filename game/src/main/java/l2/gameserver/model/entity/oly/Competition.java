@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.model.Effect;

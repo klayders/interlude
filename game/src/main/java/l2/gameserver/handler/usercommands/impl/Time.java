@@ -9,7 +9,7 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.GameTimeController;
 import l2.gameserver.handler.usercommands.IUserCommandHandler;
 import l2.gameserver.model.Player;

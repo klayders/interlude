@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import l2.commons.data.xml.AbstractFileParser;
 import l2.commons.util.RandomUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.VariationChanceHolder;
 import l2.gameserver.templates.item.support.VariationChanceData;
 import org.apache.commons.lang3.tuple.ImmutablePair;

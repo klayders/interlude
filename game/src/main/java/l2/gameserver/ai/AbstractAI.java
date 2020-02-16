@@ -14,8 +14,11 @@ import l2.gameserver.model.Skill;
 import l2.gameserver.utils.Location;
 import lombok.extern.slf4j.Slf4j;
 
+
 @Slf4j
 public abstract class AbstractAI extends RunnableImpl {
+
+
   protected final Creature _actor;
   private HardReference<? extends Creature> _attackTarget = HardReferences.emptyRef();
   private CtrlIntention _intention;

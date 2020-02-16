@@ -6,7 +6,7 @@
 package l2.gameserver.templates.item;
 
 import l2.commons.lang.ArrayUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.handler.items.IItemHandler;
 import l2.gameserver.instancemanager.CursedWeaponsManager;
 import l2.gameserver.model.Playable;

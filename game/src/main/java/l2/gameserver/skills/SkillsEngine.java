@@ -6,7 +6,7 @@
 package l2.gameserver.skills;
 
 import l2.commons.util.NaturalOrderComparator;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Skill;
 import lombok.extern.slf4j.Slf4j;
 

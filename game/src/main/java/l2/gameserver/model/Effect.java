@@ -8,7 +8,7 @@ package l2.gameserver.model;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.listener.actor.OnAttackListener;
 import l2.gameserver.listener.actor.OnMagicUseListener;
 import l2.gameserver.network.l2.s2c.AbnormalStatusUpdate;

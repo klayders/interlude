@@ -6,7 +6,6 @@
 package l2.gameserver;
 
 import l2.commons.threading.RunnableImpl;
-import l2.gameserver.config.Config;
 import l2.gameserver.model.Creature;
 import l2.gameserver.model.GameObjectsStorage;
 import l2.gameserver.model.Player;

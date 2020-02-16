@@ -5,7 +5,7 @@
 
 package l2.gameserver.network.telnet;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.network.telnet.commands.TelnetServer;
 import l2.gameserver.network.telnet.commands.*;
 import lombok.extern.slf4j.Slf4j;

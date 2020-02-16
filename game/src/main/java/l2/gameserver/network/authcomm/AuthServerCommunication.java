@@ -5,7 +5,7 @@
 
 package l2.gameserver.network.authcomm;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ThreadPoolManager;
 import l2.gameserver.network.authcomm.gs2as.AuthRequest;
 import l2.gameserver.network.l2.GameClient;

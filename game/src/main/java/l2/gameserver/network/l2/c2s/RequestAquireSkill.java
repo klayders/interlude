@@ -6,7 +6,7 @@
 package l2.gameserver.network.l2.c2s;
 
 import l2.commons.lang.ArrayUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.data.xml.holder.SkillAcquireHolder;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.Skill;

@@ -5,7 +5,7 @@
 
 package l2.gameserver.data.xml.holder;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.items.TradeItem;
 import l2.gameserver.templates.item.ItemTemplate;
 import lombok.extern.slf4j.Slf4j;

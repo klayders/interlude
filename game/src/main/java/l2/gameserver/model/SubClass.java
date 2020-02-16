@@ -5,7 +5,7 @@
 
 package l2.gameserver.model;
 
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.base.ClassId;
 import l2.gameserver.model.base.Experience;
 

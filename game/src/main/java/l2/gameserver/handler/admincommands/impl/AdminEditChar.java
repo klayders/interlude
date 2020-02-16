@@ -5,8 +5,8 @@
 
 package l2.gameserver.handler.admincommands.impl;
 
-import l2.gameserver.config.Config;
-import l2.gameserver.config.Config.RateBonusInfo;
+import l2.gameserver.Config;
+import l2.gameserver.Config.RateBonusInfo;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.dao.AccountBonusDAO;
 import l2.gameserver.database.MysqlInitializer;

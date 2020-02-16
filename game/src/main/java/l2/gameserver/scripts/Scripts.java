@@ -7,7 +7,7 @@ package l2.gameserver.scripts;
 
 import l2.commons.compiler.Compiler;
 import l2.commons.compiler.MemoryClassLoader;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.model.Player;
 import l2.gameserver.model.quest.Quest;
 import lombok.extern.slf4j.Slf4j;

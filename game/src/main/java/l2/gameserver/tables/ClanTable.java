@@ -6,7 +6,7 @@
 package l2.gameserver.tables;
 
 import l2.commons.dbutils.DbUtils;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.cache.Msg;
 import l2.gameserver.dao.CharacterVariablesDAO;
 import l2.gameserver.database.DatabaseFactory;

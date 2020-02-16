@@ -7,7 +7,7 @@ package l2.gameserver.model;
 
 import l2.commons.util.Rnd;
 import l2.commons.util.concurrent.atomic.AtomicState;
-import l2.gameserver.config.Config;
+import l2.gameserver.Config;
 import l2.gameserver.ai.CtrlEvent;
 import l2.gameserver.ai.CtrlIntention;
 import l2.gameserver.cache.Msg;

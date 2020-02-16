@@ -33,6 +33,7 @@ import org.dom4j.io.SAXReader;
 import org.napile.primitive.lists.impl.CArrayIntList;
 import org.napile.primitive.sets.IntSet;
 import org.napile.primitive.sets.impl.HashIntSet;
+import org.springframework.core.io.ClassPathResource;
 import org.w3c.dom.Node;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -45,26 +46,26 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 public class Config {
   public static final int NCPUS = Runtime.getRuntime().availableProcessors();
-  public static final String OTHER_CONFIG_FILE = "config/other.properties";
-  public static final String RESIDENCE_CONFIG_FILE = "config/residence.properties";
-  public static final String SPOIL_CONFIG_FILE = "config/spoil.properties";
-  public static final String CLAN_CONFIG_FILE = "config/clan.properties";
-  public static final String ALT_SETTINGS_FILE = "config/altsettings.properties";
-  public static final String BOSS_SETTINGS_FILE = "config/bosses.properties";
-  public static final String FORMULAS_CONFIGURATION_FILE = "config/formulas.properties";
-  public static final String PVP_CONFIG_FILE = "config/pvp.properties";
-  public static final String TELNET_CONFIGURATION_FILE = "config/telnet.properties";
-  public static final String CONFIGURATION_FILE = "config/server.properties";
-  public static final String AI_CONFIG_FILE = "config/ai.properties";
-  public static final String GEODATA_CONFIG_FILE = "config/geodata.properties";
-  public static final String EVENTS_CONFIG_FILE = "config/events.properties";
-  public static final String SERVICES_FILE = "config/services.properties";
-  public static final String SERVICES_RATE_BONUS_XML_FILE = "config/services_rate_bonus.xml";
-  public static final String OLYMPIAD = "config/olympiad.properties";
-  public static final String QUEST_RATE_FILE = "config/quest_rates.properties";
-  public static final String CHATFILTERS_CONFIG_FILE = "config/chatfilters.xml";
-  public static final String GM_PERSONAL_ACCESS_FILE = "config/GMAccess.xml";
-  public static final String GM_ACCESS_FILES_DIR = "config/GMAccess.d/";
+  public static final String OTHER_CONFIG_FILE = "game/other.properties";
+  public static final String RESIDENCE_CONFIG_FILE = "game/residence.properties";
+  public static final String SPOIL_CONFIG_FILE = "game/spoil.properties";
+  public static final String CLAN_CONFIG_FILE = "game/clan.properties";
+  public static final String ALT_SETTINGS_FILE = "game/altsettings.properties";
+  public static final String BOSS_SETTINGS_FILE = "game/bosses.properties";
+  public static final String FORMULAS_CONFIGURATION_FILE = "game/formulas.properties";
+  public static final String PVP_CONFIG_FILE = "game/pvp.properties";
+  public static final String TELNET_CONFIGURATION_FILE = "game/telnet.properties";
+  public static final String CONFIGURATION_FILE = "game/server.properties";
+  public static final String AI_CONFIG_FILE = "game/ai.properties";
+  public static final String GEODATA_CONFIG_FILE = "game/geodata.properties";
+  public static final String EVENTS_CONFIG_FILE = "game/events.properties";
+  public static final String SERVICES_FILE = "game/services.properties";
+  public static final String SERVICES_RATE_BONUS_XML_FILE = "game/services_rate_bonus.xml";
+  public static final String OLYMPIAD = "game/olympiad.properties";
+  public static final String QUEST_RATE_FILE = "game/quest_rates.properties";
+  public static final String CHATFILTERS_CONFIG_FILE = "game/chatfilters.xml";
+  public static final String GM_PERSONAL_ACCESS_FILE = "game/GMAccess.xml";
+  public static final String GM_ACCESS_FILES_DIR = "game/GMAccess.d/";
   public static int HTM_CACHE_MODE;
   public static int[] PORTS_GAME;
   public static String GAMESERVER_HOSTNAME;
@@ -1042,7 +1043,7 @@ public class Config {
   public static Map<Integer, QuestRates> QUEST_RATES = new ConcurrentHashMap();
 
   public static void loadServerConfig() {
-    ExProperties serverSettings = load("config/server.properties");
+    ExProperties serverSettings = load("game/server.properties");
     GAME_SERVER_LOGIN_HOST = serverSettings.getProperty("LoginHost", "127.0.0.1");
     GAME_SERVER_LOGIN_PORT = serverSettings.getProperty("LoginPort", 9013);
     GAME_SERVER_LOGIN_CRYPT = serverSettings.getProperty("LoginUseCrypt", true);
@@ -1051,15 +1052,14 @@ public class Config {
     AUTH_SERVER_BRACKETS = serverSettings.getProperty("ServerBrackets", false);
     AUTH_SERVER_IS_PVP = serverSettings.getProperty("PvPServer", false);
     USE_SECOND_PASSWORD_AUTH = serverSettings.getProperty("UseSecondPasswordAuth", false);
-    SECOND_AUTH_BLOCK_TIME = (long) serverSettings.getProperty("SecondAuthBlockTime", 28800);
+    SECOND_AUTH_BLOCK_TIME = serverSettings.getProperty("SecondAuthBlockTime", 28800);
     SECOND_AUTH_MAX_TRYS = serverSettings.getProperty("SecondAuthBlockMaxTry", 5);
     SECOND_AUTH_MIN_LENG = serverSettings.getProperty("SecondAuthPinMinLength", 6);
     SECOND_AUTH_MAX_LENG = serverSettings.getProperty("SecondAuthPinMaxLength", 8);
     String[] var1 = serverSettings.getProperty("ServerType", ArrayUtils.EMPTY_STRING_ARRAY);
     int var2 = var1.length;
 
-    for (int var3 = 0; var3 < var2; ++var3) {
-      String a = var1[var3];
+    for (String a : var1) {
       if (!a.trim().isEmpty()) {
         ServerType t = ServerType.valueOf(a.toUpperCase());
         AUTH_SERVER_SERVER_TYPE |= t.getMask();
@@ -1216,7 +1216,7 @@ public class Config {
   }
 
   public static void loadTelnetConfig() {
-    ExProperties telnetSettings = load("config/telnet.properties");
+    ExProperties telnetSettings = load("game/telnet.properties");
     IS_TELNET_ENABLED = telnetSettings.getProperty("EnableTelnet", false);
     TELNET_DEFAULT_ENCODING = telnetSettings.getProperty("TelnetEncoding", "UTF-8");
     TELNET_PORT = telnetSettings.getProperty("Port", 7000);
@@ -1225,7 +1225,7 @@ public class Config {
   }
 
   public static void loadResidenceConfig() {
-    ExProperties residenceSettings = load("config/residence.properties");
+    ExProperties residenceSettings = load("game/residence.properties");
     CH_BID_CURRENCY_ITEM_ID = residenceSettings.getProperty("ClanHallCurrencyItemId", 57);
     RESIDENCE_LEASE_FUNC_MULTIPLIER = residenceSettings.getProperty("ResidenceLeaseFuncMultiplier", 1.0D);
     RESIDENCE_LEASE_MULTIPLIER = residenceSettings.getProperty("ResidenceLeaseMultiplier", 1.0D);
@@ -1245,7 +1245,7 @@ public class Config {
   }
 
   public static void loadOtherConfig() {
-    ExProperties otherSettings = load("config/other.properties");
+    ExProperties otherSettings = load("game/other.properties");
     DEEPBLUE_DROP_RULES = otherSettings.getProperty("UseDeepBlueDropRules", true);
     DEEPBLUE_DROP_MAXDIFF = otherSettings.getProperty("DeepBlueDropMaxDiff", 8);
     DEEPBLUE_DROP_RAID_MAXDIFF = otherSettings.getProperty("DeepBlueDropRaidMaxDiff", 2);
@@ -1297,7 +1297,7 @@ public class Config {
       PRIVATE_BUY_MATCH_ENCHANT = otherSettings.getProperty("AltPrivateBuyMatchEnchant", true);
       SENDSTATUS_TRADE_JUST_OFFLINE = otherSettings.getProperty("SendStatusTradeJustOffline", false);
       SENDSTATUS_TRADE_MOD = otherSettings.getProperty("SendStatusTradeMod", 1.0D);
-      MUL_PLAYERS_ONLINE = (double) otherSettings.getProperty("MulOnlinePlayers", 1);
+      MUL_PLAYERS_ONLINE = otherSettings.getProperty("MulOnlinePlayers", 1);
       ANNOUNCE_MAMMON_SPAWN = otherSettings.getProperty("AnnounceMammonSpawn", true);
       GM_NAME_COLOUR = Integer.decode("0x" + otherSettings.getProperty("GMNameColour", "FFFFFF"));
       GM_HERO_AURA = otherSettings.getProperty("GMHeroAura", false);
@@ -1334,7 +1334,7 @@ public class Config {
   }
 
   public static void loadClanConfig() {
-    ExProperties clanSettings = load("config/clan.properties");
+    ExProperties clanSettings = load("game/clan.properties");
     CLAN_LEAVE_TIME_PERNALTY = clanSettings.getProperty("ClanLeaveTimePenalty", 24L) * 3600000L;
     EXPELLED_MEMBER_PENALTY = clanSettings.getProperty("ExpelledClanPenalty", 24L) * 3600000L;
     LEAVED_ALLY_PENALTY = clanSettings.getProperty("AllyLeavedPenalty", 24L) * 3600000L;
@@ -1380,7 +1380,7 @@ public class Config {
   }
 
   public static void loadSpoilConfig() {
-    ExProperties spoilSettings = load("config/spoil.properties");
+    ExProperties spoilSettings = load("game/spoil.properties");
     MINIMUM_SPOIL_RATE = spoilSettings.getProperty("MinimumPercentChanceOfSpoilSuccess", 1.0D);
     MANOR_SOWING_BASIC_SUCCESS = spoilSettings.getProperty("BasePercentChanceOfSowingSuccess", 100.0D);
     MANOR_SOWING_ALT_BASIC_SUCCESS = spoilSettings.getProperty("BasePercentChanceOfSowingAltSuccess", 10.0D);
@@ -1399,7 +1399,7 @@ public class Config {
   }
 
   public static void loadFormulasConfig() {
-    ExProperties formulasSettings = load("config/formulas.properties");
+    ExProperties formulasSettings = load("game/formulas.properties");
     SKILLS_CHANCE_MOD = formulasSettings.getProperty("SkillsChanceMod", 11.0D);
     SKILLS_CHANCE_POW = formulasSettings.getProperty("SkillsChancePow", 0.5D);
     SKILLS_CHANCE_MIN = formulasSettings.getProperty("SkillsChanceMin", 5.0D);
@@ -1427,7 +1427,7 @@ public class Config {
     LIM_MAX_CP = formulasSettings.getProperty("LimitMaxCP", 100000);
     LIM_MAX_HP = formulasSettings.getProperty("LimitMaxHP", 40000);
     LIM_MAX_MP = formulasSettings.getProperty("LimitMaxMP", 40000);
-    MCRITICAL_BASE_STAT = (double) formulasSettings.getProperty("MCriticalBaseStat", 1);
+    MCRITICAL_BASE_STAT = formulasSettings.getProperty("MCriticalBaseStat", 1);
     MDAM_CRIT_POSSIBLE = formulasSettings.getProperty("MDamCritPossibale", true);
     HEAL_CRIT_POSSIBLE = formulasSettings.getProperty("HealCritPossibale", false);
     LIM_FAME = formulasSettings.getProperty("LimitFame", 50000);
@@ -1442,7 +1442,7 @@ public class Config {
   }
 
   public static void loadAltSettings() {
-    ExProperties altSettings = load("config/altsettings.properties");
+    ExProperties altSettings = load("game/altsettings.properties");
     ALT_GAME_DELEVEL = altSettings.getProperty("Delevel", true);
     ALT_SAVE_UNSAVEABLE = altSettings.getProperty("AltSaveUnsaveable", false);
     ALT_SAVE_EFFECTS_REMAINING_TIME = altSettings.getProperty("AltSaveEffectsRemainingTime", 5);
@@ -1641,13 +1641,13 @@ public class Config {
     ALT_ALLOW_DELAY_NPC_TALK = altSettings.getProperty("AltDelayOnMoveAfterTalkWithNPC", false);
     ALT_SPREADING_AFTER_TELEPORT = altSettings.getProperty("AltSpreadingTeleportPoints", true);
     ALT_TELEPORT_PROTECTION = altSettings.getProperty("AltTeleportProtection", false);
-    ALT_TELEPORT_PROTECTION_TIME = (long) altSettings.getProperty("AltTeleportProtectionTime", 10);
+    ALT_TELEPORT_PROTECTION_TIME = altSettings.getProperty("AltTeleportProtectionTime", 10);
     ALT_INITIAL_QUESTS = altSettings.getProperty("AltInitialQuests", new int[]{255});
     ALT_MAX_PARTY_SIZE = altSettings.getProperty("AltMaxPartySize", 9);
   }
 
   public static void loadBossSettings() {
-    ExProperties bossSettings = load("config/bosses.properties");
+    ExProperties bossSettings = load("game/bosses.properties");
     FWA_LIMITUNTILSLEEPANTHARAS = bossSettings.getProperty("AntharasSleepTime", 20L) * 60000L;
     FWA_FIXTIMEINTERVALOFANTHARAS = bossSettings.getProperty("AntharasRespawnTimeInterval", 264L) * 3600000L;
     FWA_RANDOMINTERVALOFANTHARAS = bossSettings.getProperty("AntharasRandomSpawnAddTime", 0L) * 3600000L;
@@ -1692,7 +1692,7 @@ public class Config {
 
     try {
       SAXReader reader = new SAXReader(true);
-      Document document = reader.read(new File("config/services_rate_bonus.xml"));
+      Document document = reader.read(new ClassPathResource("game/services_rate_bonus.xml").getFile());
       Element root = document.getRootElement();
       Iterator rateBonusIt = root.elementIterator();
 
@@ -1733,7 +1733,7 @@ public class Config {
           } else if ("enchant_item_mul".equalsIgnoreCase(rateNode.getName())) {
             rateBonusInfo.enchantItemMul = Float.parseFloat(rateNode.attributeValue("value"));
           } else if ("bonus_days".equalsIgnoreCase(rateNode.getName())) {
-            rateBonusInfo.bonusTimeSeconds = (long) (Integer.parseInt(rateNode.attributeValue("value")) * 24 * 60 * 60);
+            rateBonusInfo.bonusTimeSeconds = Integer.parseInt(rateNode.attributeValue("value")) * 24 * 60 * 60;
           } else if ("reward".equalsIgnoreCase(rateNode.getName())) {
             rateBonusInfo.rewardItem.add(Pair.of(Integer.parseInt(rateNode.attributeValue("item_id")), Long.parseLong(rateNode.attributeValue("item_count"))));
           } else if ("name_color".equalsIgnoreCase(rateNode.getName())) {
@@ -1750,7 +1750,7 @@ public class Config {
   }
 
   public static void loadServicesSettings() {
-    ExProperties servicesSettings = load("config/services.properties");
+    ExProperties servicesSettings = load("game/services.properties");
     TEST_SERVER_HELPER_ENABLED = servicesSettings.getProperty("TestServerHelperEnabled", false);
     CLASS_MASTERS_CLASSES = servicesSettings.getProperty("ClassMasterClasses", "");
     COMMAND_CLASS_MASTER_ENABLED = servicesSettings.getProperty("ChatClassMasterEnabled", false);
@@ -1765,9 +1765,9 @@ public class Config {
     QUEST_SELL_QUEST_PRICES = servicesSettings.getProperty("QuestSellQuestPrices", "");
     APPEARANCE_APPLY_ITEM_ID = servicesSettings.getProperty("ChangeAppearanceItemId", 3435);
     APPEARANCE_SUPPORT_ITEM_ID = servicesSettings.getProperty("ChangeAppearanceCostItemId", 57);
-    APPEARANCE_SUPPORT_ITEM_CNT = (long) servicesSettings.getProperty("ChangeAppearanceCostCount", 2000000);
+    APPEARANCE_SUPPORT_ITEM_CNT = servicesSettings.getProperty("ChangeAppearanceCostCount", 2000000);
     APPEARANCE_CANCEL_ITEM_ID = servicesSettings.getProperty("CancelAppearanceCostItemId", 3434);
-    APPEARANCE_CANCEL_PRICE = (long) servicesSettings.getProperty("CancelAppearanceAdenaPrice", 1000);
+    APPEARANCE_CANCEL_PRICE = servicesSettings.getProperty("CancelAppearanceAdenaPrice", 1000);
     SERVICES_CHANGE_CLAN_NAME_ENABLED = servicesSettings.getProperty("ClanNameChangeEnabled", false);
     SERVICES_CHANGE_CLAN_NAME_PRICE = servicesSettings.getProperty("ClanNameChangePrice", 100);
     SERVICES_CHANGE_CLAN_NAME_ITEM = servicesSettings.getProperty("ClanNameChangeItem", 4037);
@@ -1825,7 +1825,7 @@ public class Config {
     SERVICES_CLAN_BUFF_ENABLED = servicesSettings.getProperty("ClanBuffServiceEnable", false);
     SERVICES_CLAN_BUFF_SKILL_ID = servicesSettings.getProperty("ClanBuffServiceBuffId", 9200);
     SERVICES_CLAN_BUFF_LEVELS_MIN_ONLINE = servicesSettings.getProperty("ClanBuffServiceOnlineLevelUp", "10-1;20-2;30-3");
-    SERVICES_CLAN_BUFF_TASK_DELAY = (long) servicesSettings.getProperty("ClanBuffServiceTaskDelay", 5);
+    SERVICES_CLAN_BUFF_TASK_DELAY = servicesSettings.getProperty("ClanBuffServiceTaskDelay", 5);
     SERVICES_CLANSKILL_SELL_ENABLED = servicesSettings.getProperty("ClanSkillsSellEnable", false);
     SERVICES_CLAN_SKILL_SELL_ITEM = servicesSettings.getProperty("ClanSkillsSellItemId", 4037);
     SERVICES_CLAN_SKILL_SELL_PRICE = servicesSettings.getProperty("ClanSkillsSellItemCount", 1000);
@@ -1855,13 +1855,13 @@ public class Config {
     SERVICES_OLY_POINTS_REWARD = servicesSettings.getProperty("ServiceOlyPointsResetAmount", 18);
     SERVICES_PK_CLEAN_ENABLED = servicesSettings.getProperty("PKCleanEnabled", false);
     SERVICES_PK_CLEAN_SELL_ITEM = servicesSettings.getProperty("PKCleanItemId", 4037);
-    SERVICES_PK_CLEAN_SELL_PRICE = (long) servicesSettings.getProperty("PKCleanPrice", 1000);
+    SERVICES_PK_CLEAN_SELL_PRICE = servicesSettings.getProperty("PKCleanPrice", 1000);
     SERVICES_PK_ANNOUNCE = servicesSettings.getProperty("AnnouncePK", false);
     SERVICES_ALLOW_WYVERN_RIDE = servicesSettings.getProperty("AllowRideWyvernService", false);
     SERVICES_WYVERN_ITEM_ID = servicesSettings.getProperty("RideWyvernServiceItemId", 4037);
     SERVICES_KARMA_CLEAN_ENABLED = servicesSettings.getProperty("KarmaCleanServiceEnabled", false);
     SERVICES_KARMA_CLEAN_SELL_ITEM = servicesSettings.getProperty("KarmaCleanItemId", 4037);
-    SERVICES_KARMA_CLEAN_SELL_PRICE = (long) servicesSettings.getProperty("KarmaCleanPrice", 1000);
+    SERVICES_KARMA_CLEAN_SELL_PRICE = servicesSettings.getProperty("KarmaCleanPrice", 1000);
     SERVICES_EXPAND_INVENTORY_ENABLED = servicesSettings.getProperty("ExpandInventoryEnabled", false);
     SERVICES_EXPAND_INVENTORY_PRICE = servicesSettings.getProperty("ExpandInventoryPrice", 1000);
     SERVICES_EXPAND_INVENTORY_ITEM = servicesSettings.getProperty("ExpandInventoryItem", 4037);
@@ -1938,7 +1938,7 @@ public class Config {
     SERVICES_CLAN_SUMMON_COMMAND_SELL_ITEM = servicesSettings.getProperty("ClanLeaderSummonItemId", 4037);
     SERVICES_CLAN_SUMMON_COMMAND_SELL_PRICE = servicesSettings.getProperty("ClanLeaderSummonItemCount", 1);
     SERVICES_CLAN_SUMMON_COMMAND_SUMMON_CRYSTAL_COUNT = servicesSettings.getProperty("ClanSummonCrystalCount", 1);
-    REUSE_DELAY_FOR_CLAN_SUMMON = (long) (servicesSettings.getProperty("ClanSummonReuseDelay", 30) * 60);
+    REUSE_DELAY_FOR_CLAN_SUMMON = servicesSettings.getProperty("ClanSummonReuseDelay", 30) * 60;
     SERVICES_WHOIAM_COMMAND_ENABLE = servicesSettings.getProperty("WhoiameCommandForAll", true);
     SERVICES_CPACP_ENABLE = servicesSettings.getProperty("ACPServiceEnableCP", false);
     SERVICES_CPACP_MIN_PERCENT = Math.min(Math.max(0, servicesSettings.getProperty("ACPServiceCPMinPercent", 10)), 100);
@@ -1967,7 +1967,7 @@ public class Config {
       pawnShopItemClasses.add(ItemClass.valueOf(pwics));
     }
 
-    PAWNSHOP_ITEMS_CLASSES = (ItemClass[]) pawnShopItemClasses.toArray(new ItemClass[pawnShopItemClasses.size()]);
+    PAWNSHOP_ITEMS_CLASSES = pawnShopItemClasses.toArray(new ItemClass[pawnShopItemClasses.size()]);
     PAWNSHOP_ITEMS_PER_PAGE = servicesSettings.getProperty("PawnShopItemsPerPage", 5);
     PAWNSHOP_MIN_ENCHANT_LEVEL = servicesSettings.getProperty("PawnShopMinEnchantLevel", 0);
     PAWNSHOP_ALLOW_SELL_AUGMENTED_ITEMS = servicesSettings.getProperty("PawnShopAllowTradeAugmentedItems", false);
@@ -2005,7 +2005,7 @@ public class Config {
     WEDDING_NORMAL_COLOR = Integer.decode("0x" + servicesSettings.getProperty("WeddingNormalCoupleNickColor", "BF0000"));
     WEDDING_GAY_COLOR = Integer.decode("0x" + servicesSettings.getProperty("WeddingGayCoupleNickColor", "0000BF"));
     WEDDING_LESBIAN_COLOR = Integer.decode("0x" + servicesSettings.getProperty("WeddingLesbianCoupleNickColor", "BF00BF"));
-    L2TOPRU_DELAY = (long) (servicesSettings.getProperty("L2TopRuDelay", 0) * 1000 * 60);
+    L2TOPRU_DELAY = servicesSettings.getProperty("L2TopRuDelay", 0) * 1000 * 60;
     L2TOPRU_PREFIX = servicesSettings.getProperty("L2TopRuServerPrefix");
     L2TOPRU_WEB_VOTE_URL = servicesSettings.getProperty("L2TopRuWebURL");
     L2TOPRU_SMS_VOTE_URL = servicesSettings.getProperty("L2TopRuSMSURL");
@@ -2015,7 +2015,7 @@ public class Config {
     L2TOPRU_SMS_REWARD_ITEMCOUNT = servicesSettings.getProperty("L2TopRuSMSRewardItemCount", 10);
     L2TOPRU_SMS_REWARD_VOTE_MULTI = servicesSettings.getProperty("L2TopRuSMSRewardMultiVote", false);
     L2TOPZONE_ENABLED = servicesSettings.getProperty("L2TopZoneServiceEnabled", false);
-    L2TOPZONE_VOTE_TIME_TO_LIVE = (long) (servicesSettings.getProperty("L2TopZoneVoteTimeToLive", 12) * 3600);
+    L2TOPZONE_VOTE_TIME_TO_LIVE = servicesSettings.getProperty("L2TopZoneVoteTimeToLive", 12) * 3600;
     L2TOPZONE_SERVER_ID = servicesSettings.getProperty("L2TopZoneServerId", 0);
     L2TOPZONE_API_KEY = servicesSettings.getProperty("L2TopZoneApiKey", "");
     L2TOPZONE_REWARD_ITEM_ID = servicesSettings.getProperty("L2TopZoneRewardItemId", 57);
@@ -2023,7 +2023,7 @@ public class Config {
   }
 
   public static void loadPvPSettings() {
-    ExProperties pvpSettings = load("config/pvp.properties");
+    ExProperties pvpSettings = load("game/pvp.properties");
     KARMA_MIN_KARMA = pvpSettings.getProperty("MinKarma", 240);
     KARMA_SP_DIVIDER = pvpSettings.getProperty("SPDivider", 7);
     KARMA_LOST_BASE = pvpSettings.getProperty("BaseKarmaLost", 0);
@@ -2069,18 +2069,18 @@ public class Config {
   }
 
   public static void loadAISettings() {
-    ExProperties aiSettings = load("config/ai.properties");
+    ExProperties aiSettings = load("game/ai.properties");
     AI_TASK_MANAGER_COUNT = aiSettings.getProperty("AiTaskManagers", 1);
-    AI_TASK_ATTACK_DELAY = (long) aiSettings.getProperty("AiTaskDelay", 1000);
-    AI_TASK_ACTIVE_DELAY = (long) aiSettings.getProperty("AiTaskActiveDelay", 1000);
+    AI_TASK_ATTACK_DELAY = aiSettings.getProperty("AiTaskDelay", 1000);
+    AI_TASK_ACTIVE_DELAY = aiSettings.getProperty("AiTaskActiveDelay", 1000);
     BLOCK_ACTIVE_TASKS = aiSettings.getProperty("BlockActiveTasks", false);
     ALWAYS_TELEPORT_HOME = aiSettings.getProperty("AlwaysTeleportHome", false);
     RND_WALK = aiSettings.getProperty("RndWalk", true);
     RND_WALK_RATE = aiSettings.getProperty("RndWalkRate", 1);
     RND_ANIMATION_RATE = aiSettings.getProperty("RndAnimationRate", 2);
     AGGRO_CHECK_INTERVAL = aiSettings.getProperty("AggroCheckInterval", 250);
-    NONAGGRO_TIME_ONTELEPORT = (long) aiSettings.getProperty("NonAggroTimeOnTeleport", 15000);
-    NONAGGRO_TIME_ONLOGIN = (long) aiSettings.getProperty("NonAggroTimeOnLogin", 15000);
+    NONAGGRO_TIME_ONTELEPORT = aiSettings.getProperty("NonAggroTimeOnTeleport", 15000);
+    NONAGGRO_TIME_ONLOGIN = aiSettings.getProperty("NonAggroTimeOnLogin", 15000);
     MAX_DRIFT_RANGE = aiSettings.getProperty("MaxDriftRange", 100);
     MAX_PURSUE_RANGE = aiSettings.getProperty("MaxPursueRange", 4000);
     MAX_PURSUE_UNDERGROUND_RANGE = aiSettings.getProperty("MaxPursueUndergoundRange", 2000);
@@ -2089,7 +2089,7 @@ public class Config {
   }
 
   public static void loadGeodataSettings() {
-    ExProperties geodataSettings = load("config/geodata.properties");
+    ExProperties geodataSettings = load("game/geodata.properties");
     GEO_X_FIRST = geodataSettings.getProperty("GeoFirstX", 15);
     GEO_Y_FIRST = geodataSettings.getProperty("GeoFirstY", 10);
     GEO_X_LAST = geodataSettings.getProperty("GeoLastX", 26);
@@ -2107,12 +2107,12 @@ public class Config {
     PATHFIND_MAX_Z_DIFF = geodataSettings.getProperty("PathFindMaxZDiff", 32);
     MAX_Z_DIFF = geodataSettings.getProperty("MaxZDiff", 64);
     MIN_LAYER_HEIGHT = geodataSettings.getProperty("MinLayerHeight", 64);
-    PATHFIND_MAX_TIME = (long) geodataSettings.getProperty("PathFindMaxTime", 10000000);
+    PATHFIND_MAX_TIME = geodataSettings.getProperty("PathFindMaxTime", 10000000);
     PATHFIND_BUFFERS = geodataSettings.getProperty("PathFindBuffers", "8x96;8x128;8x160;8x192;4x224;4x256;4x288;2x320;2x384;2x352;1x512");
   }
 
   public static void loadEventsSettings() {
-    ExProperties eventSettings = load("config/events.properties");
+    ExProperties eventSettings = load("game/events.properties");
     EVENT_CofferOfShadowsPriceRate = eventSettings.getProperty("CofferOfShadowsPriceRate", 1.0D);
     EVENT_CofferOfShadowsRewardRate = eventSettings.getProperty("CofferOfShadowsRewardRate", 1.0D);
     EVENT_LastHeroItemID = eventSettings.getProperty("LastHero_bonus_id", 57);
@@ -2141,7 +2141,7 @@ public class Config {
     EVENT_CHANGE_OF_HEART_CHANCE = eventSettings.getProperty("EVENT_CHANGE_OF_HEART_CHANCE", 5.0D);
     EVENT_CHRISTMAS_CHANCE = eventSettings.getProperty("EVENT_CHRISTMAS_CHANCE", 1.0D);
     EVENT_APIL_FOOLS_DROP_CHANCE = eventSettings.getProperty("AprilFollsDropChance", 50.0D);
-    EVENT_SAVING_SNOWMAN_LOTERY_PRICE = (long) eventSettings.getProperty("SavingSnowmanLoteryPrice", 50000);
+    EVENT_SAVING_SNOWMAN_LOTERY_PRICE = eventSettings.getProperty("SavingSnowmanLoteryPrice", 50000);
     EVENT_SAVING_SNOWMAN_REWARDER_CHANCE = eventSettings.getProperty("SavingSnowmanRewarderChance", 2);
     EVENT_SAVING_SNOWMAN_LOTERY_CURENCY = eventSettings.getProperty("SavingSnowmanLoteryCurency", 20076);
     EVENT_FINDER_REWARD_ID = eventSettings.getProperty("EventFinderRewardId", 57);
@@ -2173,7 +2173,7 @@ public class Config {
   }
 
   public static void loadOlympiadSettings() {
-    ExProperties olympSettings = load("config/olympiad.properties");
+    ExProperties olympSettings = load("game/olympiad.properties");
     OLY_ENABLED = olympSettings.getProperty("OlympiadEnabled", true);
     OLY_SPECTATION_ALLOWED = olympSettings.getProperty("SpectationgAllowed", true);
     NPC_OLYMPIAD_GAME_ANNOUNCE = olympSettings.getProperty("OlympiadNpcAnnounceTeleportOnStdium", true);
@@ -2239,7 +2239,7 @@ public class Config {
           log.warn("Can't parse \"" + olyBuff + "\"");
         } else {
           int classId = Integer.parseInt(olyBuff.substring(0, olyBuffSkillDelimIdx));
-          TIntIntHashMap buffs = (TIntIntHashMap) OLY_BUFFS.get(classId);
+          TIntIntHashMap buffs = OLY_BUFFS.get(classId);
           if (buffs == null) {
             OLY_BUFFS.put(classId, buffs = new TIntIntHashMap());
           }
@@ -2260,7 +2260,7 @@ public class Config {
   }
 
   public static void loadQuestRateSettings() {
-    ExProperties questRateSettings = load("config/quest_rates.properties");
+    ExProperties questRateSettings = load("game/quest_rates.properties");
     Map<Integer, QuestRates> questRates = new HashMap<>();
     Iterator var2 = questRateSettings.keySet().iterator();
 
@@ -2288,7 +2288,7 @@ public class Config {
           log.warn("Can't parse quest rate param \"" + key + "\"");
         } else {
           String questRateParam = key.substring(paramIdx + 1);
-          QuestRates questRate = (QuestRates) questRates.get(questId);
+          QuestRates questRate = questRates.get(questId);
           if (questRate == null) {
             questRates.put(questId, questRate = new QuestRates(questId));
           }
@@ -2306,7 +2306,7 @@ public class Config {
     QUEST_RATES.putAll(questRates);
   }
 
-  public static void load() {
+  public static void load() throws IOException {
     loadServerConfig();
     loadTelnetConfig();
     loadResidenceConfig();
@@ -2334,16 +2334,15 @@ public class Config {
     ChatFilterParser.getInstance().load();
   }
 
-  public static void loadGMAccess() {
+  public static void loadGMAccess() throws IOException {
     gmlist.clear();
-    loadGMAccess(new File("config/GMAccess.xml"));
-    File dir = new File("config/GMAccess.d/");
+    loadGMAccess(new ClassPathResource("game/GMAccess.xml").getFile());
+    File dir = new ClassPathResource("game/GMAccess.d/").getFile();
     if (dir.exists() && dir.isDirectory()) {
       File[] var1 = dir.listFiles();
       int var2 = var1.length;
 
-      for (int var3 = 0; var3 < var2; ++var3) {
-        File f = var1[var3];
+      for (File f : var1) {
         if (!f.isDirectory() && f.getName().endsWith(".xml")) {
           loadGMAccess(f);
         }
@@ -2402,7 +2401,7 @@ public class Config {
       return null;
     } else {
       try {
-        return String.valueOf(field.get((Object) null));
+        return String.valueOf(field.get(null));
       } catch (IllegalArgumentException var3) {
       } catch (IllegalAccessException var4) {
       }
@@ -2418,19 +2417,19 @@ public class Config {
     } else {
       try {
         if (field.getType() == Boolean.TYPE) {
-          field.setBoolean((Object) null, BooleanUtils.toBoolean(value));
+          field.setBoolean(null, BooleanUtils.toBoolean(value));
         } else if (field.getType() == Integer.TYPE) {
-          field.setInt((Object) null, NumberUtils.toInt(value));
+          field.setInt(null, NumberUtils.toInt(value));
         } else if (field.getType() == Long.TYPE) {
-          field.setLong((Object) null, NumberUtils.toLong(value));
+          field.setLong(null, NumberUtils.toLong(value));
         } else if (field.getType() == Double.TYPE) {
-          field.setDouble((Object) null, NumberUtils.toDouble(value));
+          field.setDouble(null, NumberUtils.toDouble(value));
         } else {
           if (field.getType() != String.class) {
             return false;
           }
 
-          field.set((Object) null, value);
+          field.set(null, value);
         }
 
         return true;
@@ -2443,7 +2442,12 @@ public class Config {
   }
 
   public static ExProperties load(String filename) {
-    return load(new File(filename));
+    try {
+      return load(new ClassPathResource(filename).getFile());
+    } catch (IOException e) {
+      log.error("NOT LOAD FILE FROM classPath");
+      return null;
+    }
   }
 
   public static ExProperties load(File file) {
@@ -2458,11 +2462,11 @@ public class Config {
     return result;
   }
 
-  public static enum OlySeasonTimeCalcMode {
+  public enum OlySeasonTimeCalcMode {
     NORMAL,
     CUSTOM;
 
-    private OlySeasonTimeCalcMode() {
+    OlySeasonTimeCalcMode() {
     }
   }
 

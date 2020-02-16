@@ -7,6 +7,7 @@ package l2.gameserver.data.xml.parser;
 
 import gnu.trove.TIntArrayList;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -32,8 +33,10 @@ import l2.gameserver.model.chat.chatfilter.matcher.MatchPremiumState;
 import l2.gameserver.model.chat.chatfilter.matcher.MatchRecipientLimit;
 import l2.gameserver.model.chat.chatfilter.matcher.MatchWords;
 import l2.gameserver.network.l2.components.ChatType;
+import lombok.extern.slf4j.Slf4j;
 import org.dom4j.Element;
-
+import org.springframework.core.io.ClassPathResource;
+@Slf4j
 public class ChatFilterParser extends AbstractFileParser<ChatFilters> {
   private static ChatFilterParser _instance = new ChatFilterParser();
 
@@ -122,12 +125,16 @@ public class ChatFilterParser extends AbstractFileParser<ChatFilters> {
 
           while(eItr.hasNext()) {
             Element d = (Element)eItr.next();
-            if (d.getName().equals("Count")) {
-              limitCount = Integer.parseInt(d.getText());
-            } else if (d.getName().equals("Time")) {
-              limitTime = Integer.parseInt(d.getText());
-            } else if (d.getName().equals("Burst")) {
-              limitBurst = Integer.parseInt(d.getText());
+            switch (d.getName()) {
+              case "Count":
+                limitCount = Integer.parseInt(d.getText());
+                break;
+              case "Time":
+                limitTime = Integer.parseInt(d.getText());
+                break;
+              case "Burst":
+                limitBurst = Integer.parseInt(d.getText());
+                break;
             }
           }
 
@@ -143,12 +150,16 @@ public class ChatFilterParser extends AbstractFileParser<ChatFilters> {
             throw new IllegalArgumentException("Limit Burst < 1!");
           }
 
-          if (e.getName().equals("Limit")) {
-            matchers.add(new MatchChatLimit(limitCount, limitTime, limitBurst));
-          } else if (e.getName().equals("FloodLimit")) {
-            matchers.add(new MatchFloodLimit(limitCount, limitTime, limitBurst));
-          } else if (e.getName().equals("RecipientLimit")) {
-            matchers.add(new MatchRecipientLimit(limitCount, limitTime, limitBurst));
+          switch (e.getName()) {
+            case "Limit":
+              matchers.add(new MatchChatLimit(limitCount, limitTime, limitBurst));
+              break;
+            case "FloodLimit":
+              matchers.add(new MatchFloodLimit(limitCount, limitTime, limitBurst));
+              break;
+            case "RecipientLimit":
+              matchers.add(new MatchRecipientLimit(limitCount, limitTime, limitBurst));
+              break;
           }
         }
       }
@@ -158,10 +169,10 @@ public class ChatFilterParser extends AbstractFileParser<ChatFilters> {
   }
 
   protected void readData(Element rootElement) throws Exception {
-    Object matcher;
+    ChatFilterMatcher matcher;
     byte action;
     String value;
-    for(Iterator iterator = rootElement.elementIterator(); iterator.hasNext(); ((ChatFilters)this.getHolder()).add(new ChatFilter((ChatFilterMatcher)matcher, action, value))) {
+    for(Iterator iterator = rootElement.elementIterator(); iterator.hasNext(); this.getHolder().add(new ChatFilter(matcher, action, value))) {
       action = 0;
       value = null;
       Element filterElement = (Element)iterator.next();
@@ -197,16 +208,21 @@ public class ChatFilterParser extends AbstractFileParser<ChatFilters> {
       }
 
       if (matchers.size() == 1) {
-        matcher = (ChatFilterMatcher)matchers.get(0);
+        matcher = matchers.get(0);
       } else {
-        matcher = new MatchLogicalAnd((ChatFilterMatcher[])matchers.toArray(new ChatFilterMatcher[matchers.size()]));
+        matcher = new MatchLogicalAnd(matchers.toArray(new ChatFilterMatcher[matchers.size()]));
       }
     }
 
   }
 
   public File getXMLFile() {
-    return new File("config/chatfilters.xml");
+    try {
+      return new ClassPathResource("game/chatfilters.xml").getFile();
+    } catch (IOException e) {
+      log.error("chatfilters.xml not found\");\n");
+      return null;
+    }
   }
 
   public String getDTDFileName() {

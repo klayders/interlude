@@ -6,12 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="interlude" />
+        <module name="common" />
+        <module name="auth" />
+        <module name="game" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="game" options="-parameters" />
       <module name="interlude" options="-parameters" />
     </option>
   </component>

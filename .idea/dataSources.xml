@@ -7,11 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/l2_main</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="dev" uuid="81630b4f-0225-4150-bb82-fe844ec20b8c">
+    <data-source source="LOCAL" name="prod" uuid="81630b4f-0225-4150-bb82-fe844ec20b8c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://10.10.100.119:3306/l2_main</jdbc-url>
+      <jdbc-url>jdbc:mysql://94.130.78.245:3306/l2_main</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -28,9 +28,13 @@ pid
 
 ### VS Code ###
 .vscode/
+
 /.idea/
 /log/
 .idea/
 encodings.xml
 misc.xml
 workspace.xml
+auth/target/
+game/target/
+common/target/
